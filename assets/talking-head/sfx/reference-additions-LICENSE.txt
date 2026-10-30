@@ -1,0 +1,18 @@
+Eight additional sound effects, CC0 1.0
+
+Kenney: card-slide-1, card-place-1, card-fan-1, impactSoft_medium_001,
+drop_001, ui/mouseclick1, ui/switch6.
+https://kenney.nl/assets/casino-audio
+https://kenney.nl/assets/impact-sounds
+https://kenney.nl/assets/interface-sounds
+https://kenney.nl/assets/ui-audio
+
+unicaegames: keypress-007.
+https://opengameart.org/content/keyboard-soundpack-1-typing-and-single-keystrokes
+
+CC0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Original recordings were selected from Brag commit
+1f8d9ade17d0ad4419cca9305fbc1398a4dd5b39 and independently measured for
+Product Demo. Source bytes and hashes are preserved in this Talking Head copy.
+These files are bundled locally. No Product Demo installation is needed.

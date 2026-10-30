@@ -1,0 +1,94 @@
+{
+  "name": "creator-format-3",
+  "referenceCanvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "sources": [
+    "XAV7E2CFCK3",
+    "XAWVWlBWlGh",
+    "XAXZVuI1VBP",
+    "XAY9n44H5sB",
+    "XAZVwHzBCHn"
+  ],
+  "layout": {
+    "splitSeamYFrac": 0.5,
+    "topVisual": { "xFrac": 0, "yFrac": 0, "wFrac": 1, "hFrac": 0.5 },
+    "bottomCreator": { "xFrac": 0, "yFrac": 0.5, "wFrac": 1, "hFrac": 0.5 },
+    "fullOverlay": { "xFrac": 0, "yFrac": 0, "wFrac": 1, "hFrac": 1 },
+    "commonSplitCardWidthFracRange": [0.84, 0.92],
+    "narrowSplitCardWidthFracRange": [0.7, 0.76],
+    "fullOverlayColumnWidthFracRange": [0.78, 0.88]
+  },
+  "caption": {
+    "centerXFrac": 0.5,
+    "presets": {
+      "splitSeamYFrac": 0.5,
+      "overlayCenterYFrac": 0.5,
+      "overlayLowerYFracRange": [0.76, 0.78],
+      "faceLowerYFracRange": [0.76, 0.8]
+    },
+    "fontFamilyRole": "uppercase pixel or bitmap mono",
+    "fontCandidates": ["Departure Mono", "VCR OSD Mono", "Pixel Operator", "Pixeloid Sans"],
+    "fontSizePxRange": [50, 58],
+    "fontWeightRange": [400, 550],
+    "lineCount": 1,
+    "phraseWordCountRange": [1, 4],
+    "fillColor": "#FAFAF8",
+    "surface": "rgba(12, 10, 10, 0.76-0.90)",
+    "radiusPxRange": [10, 16],
+    "paddingXPxRange": [18, 24],
+    "paddingYPxRange": [10, 16],
+    "transition": "hard phrase replacement"
+  },
+  "typography": {
+    "uiRole": "Inter, SF Pro, or close neutral system sans",
+    "terminalRole": "SF Mono, JetBrains Mono, or close developer mono",
+    "counterRule": "tabular numerals",
+    "heroRole": "very heavy extended or geometric display sans",
+    "heroCandidates": ["Archivo Black", "Monument Extended", "Montserrat Black"]
+  },
+  "palette": {
+    "canvasRange": ["#F2EFEB", "#F6F3EE"],
+    "cardRange": ["#FFFFFF", "#FFFCF7"],
+    "inkRange": ["#0F1114", "#1B1918"],
+    "mutedRange": ["#66666D", "#989696"],
+    "accentRange": ["#CF6948", "#DD7052"],
+    "successUse": "functional completion, live, available, or corrected states only",
+    "platformColorUse": "local affordances and identity only"
+  },
+  "card": {
+    "radiusPxRange": [18, 34],
+    "borderPxRange": [1, 2],
+    "paddingPxRange": [28, 52],
+    "shadow": "broad, low-opacity, slight positive y offset",
+    "glass": false
+  },
+  "motion": {
+    "chapterCutFramesRange": [0, 2],
+    "childEntranceSecondsRange": [0.1, 0.3],
+    "sameFamilySwapSecondsRange": [0.2, 0.5],
+    "workflowStepSecondsRange": [0.3, 0.8],
+    "pluralityBuildSecondsRange": [0.7, 1.9],
+    "countBuildSecondsRange": [0.7, 3.5],
+    "realScreenWipeSecondsRange": [0.15, 0.2],
+    "heroEntranceSecondsRange": [0.1, 0.3],
+    "resolvedHoldSecondsRange": [0.6, 3.0],
+    "decorativeLoop": false
+  },
+  "cta": {
+    "layoutMode": "face",
+    "keywordXFracRange": [0.1, 0.9],
+    "keywordYFracRange": [0.16, 0.29],
+    "persistent": true,
+    "normalCaptionsContinue": true,
+    "button": false
+  },
+  "confidence": {
+    "layoutAndSelectionRules": "high",
+    "captionGeometry": "high",
+    "paletteAndMotionFamily": "high",
+    "cropTranslationAndEasing": "medium",
+    "exactFontFiles": "low-to-medium"
+  }
+}

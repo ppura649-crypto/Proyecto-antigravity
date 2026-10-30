@@ -1,0 +1,23 @@
+{
+ "title": {
+  "lines": [
+   "<what the video pays off, line 1>",
+   "<line 2 or nothing>"
+  ],
+  "showMs": 0,
+  "clearMs": 2100,
+  "reveal": "none",
+  "look": "label",
+  "topFrac": "geometry.suggest.titleTopFrac (reference edit B: 0.235 over a head at 0.385H; reference edit D: 0.315 over a head at 0.459H)",
+  "fontPx": "the size that fits ONE line in the frame: 68 px for two short lines (reference edit E), 46 px for a 31-character single line (reference edit D)",
+  "law": "complete at frame 0, two lines max, no wrap, higher and smaller than the first try (68 px at 0.335H was rejected), Avenir Next Bold uppercase, BLACK on a WHITE rectangle (the native Instagram text label, the guest 2026-09-05: an animated reveal 'delays the idea' and white words on their cream wall are not the label the creator asks for)"
+ },
+ "stack": {
+  "grammar": "the Creator Format 1 stack shape in one flat setting: 46 px white uppercase, lines centred, no hero size, no accent colour",
+  "stackTopFrac": "geometry.suggest.stackTopFrac (reference edit B: 0.655)"
+ },
+ "firstObject": {
+  "law": "up inside 0.5 s, not the title; on reference edit B the agent tree on 'team' at 2.17 s was accepted because the stack owned the first 2 s"
+ },
+ "speed": "1x everywhere. No ramp, no atempo, ever (2026-09-05, \"don't sped up pls. Don't do that\"); pacing comes from the cut preset."
+}

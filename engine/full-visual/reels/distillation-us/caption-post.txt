@@ -1,0 +1,8 @@
+Comment "REPORT" and I'll send you Anthropic's full report.
+
+Alibaba sent Claude over 151 million requests in three months to train Qwen. Anthropic's new report shows exactly how.
+
+> It's called distillation: a strong model (the teacher) answers, a smaller one (the student) trains on those answers
+> The student learns one token at a time, its weights nudged every time it guesses the teacher's next word wrong
+> What it never sees: Claude's hidden states and full probabilities, only the final text
+> That's why Alibaba went after Claude's reasoning, and why Claude now only shows a summary of it

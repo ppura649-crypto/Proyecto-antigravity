@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talking Head review</title>
+<style>
+  :root { --bg:#0d0f12; --panel:#16191d; --card:#1d2126; --ink:#eee; --mut:#8a93a0; --keep:#39d353; --hook:#e07850; --cta:#58a6ff; --sel:#e6edf3; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px system-ui; display:flex; flex-direction:column; height:100vh; overflow:hidden; }
+  header { display:flex; gap:14px; align-items:center; padding:8px 14px; background:var(--panel); flex:0 0 auto; }
+  header .stats { color:var(--mut); }
+  header button { background:var(--keep); color:#000; border:0; border-radius:6px; padding:6px 14px; font-weight:700; cursor:pointer; }
+  header .hint { color:var(--mut); margin-left:auto; font-size:12px; }
+  #stage { flex:1 1 auto; display:flex; align-items:center; justify-content:center; min-height:0; padding:10px; }
+  video { max-height:100%; max-width:100%; border-radius:10px; background:#000; }
+  #tlwrap { flex:0 0 auto; background:var(--panel); border-top:1px solid #23272e; padding:10px 0 6px; }
+  #tlbar { display:flex; align-items:center; gap:10px; padding:0 14px 8px; color:var(--mut); font-size:12px; }
+  #timeline { position:relative; overflow-x:auto; overflow-y:hidden; padding:4px 14px 10px; }
+  #strip { position:relative; display:flex; gap:6px; height:132px; width:max-content; }
+  .clip { position:relative; height:100%; background:#20262c; border:2px solid #2c333b; border-radius:10px; flex:0 0 auto; overflow:hidden; cursor:pointer; user-select:none; }
+  .clip.sel { border-color:var(--sel); }
+  .clip.hook { border-color:var(--hook); }
+  .clip.cta { border-color:var(--cta); }
+  .clip.sel.hook, .clip.sel.cta { box-shadow:0 0 0 2px var(--sel) inset; }
+  .clip canvas { position:absolute; inset:24px 0 22px 0; width:100%; height:calc(100% - 46px); }
+  .clip .top { position:absolute; top:3px; left:8px; right:8px; display:flex; justify-content:space-between; font-size:11px; color:var(--mut); }
+  .clip .top b { color:var(--ink); }
+  .clip .txt { position:absolute; bottom:3px; left:8px; right:8px; font-size:11px; color:var(--mut); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .clip .h { position:absolute; top:0; bottom:0; width:9px; cursor:ew-resize; z-index:3; }
+  .clip .h.l { left:0; border-radius:8px 0 0 8px; }
+  .clip .h.r { right:0; border-radius:0 8px 8px 0; }
+  .clip .h:hover, .clip .h.drag { background:rgba(230,237,243,.25); }
+  #playhead { position:absolute; top:4px; bottom:10px; width:2px; background:#f85149; z-index:5; pointer-events:none; display:none; }
+  #drawer { flex:0 0 auto; background:var(--bg); max-height:180px; overflow-y:auto; border-top:1px solid #23272e; }
+  #drawer summary { padding:6px 14px; color:var(--mut); cursor:pointer; font-size:13px; }
+  .drow { display:grid; grid-template-columns:44px 40px 1fr 64px 70px; gap:10px; padding:4px 14px; color:var(--mut); font-size:13px; align-items:center; }
+  .drow .restore { background:#2c333b; color:var(--ink); border:0; border-radius:5px; padding:3px 8px; cursor:pointer; }
+  .drow .t { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+</style>
+</head>
+<body>
+<header>
+  <b>Talking Head</b>
+  <span class="stats" id="stats"></span>
+  <button id="save">Save</button>
+  <span id="saved" style="color:var(--keep)"></span>
+  <span class="hint">space play/pause &middot; &larr;/&rarr; clip &middot; enter play from clip &middot; k drop &middot; drag card edges to trim/extend</span>
+</header>
+<div id="stage"><video id="video" src="source.mov" playsinline></video></div>
+<div id="tlwrap">
+  <div id="tlbar">
+    <span>timeline</span>
+    <input type="range" id="zoom" min="20" max="200" value="64" style="width:160px">
+    <span id="dur"></span>
+  </div>
+  <div id="timeline"><div id="strip"><div id="playhead"></div></div></div>
+</div>
+<details id="drawer"><summary>dropped clips</summary><div id="dlist"></div></details>
+<script>
+let doc, peaks, sel = -1, playing = false, pps = 64;
+const video = document.getElementById('video');
+const strip = document.getElementById('strip');
+const playhead = document.getElementById('playhead');
+
+const kept = () => doc.clips.filter(c => c.keep);
+const effMs = (c) => c.outMs - c.inMs - (c.innerCuts || []).reduce((a, g) => a + g.toMs - g.fromMs, 0);
+const msToBucket = (ms) => Math.floor(ms / peaks.bucketMs);
+
+async function boot() {
+  doc = await (await fetch('cuts.json')).json();
+  window.baseLm = (await (await fetch('/cuts-meta')).json()).lm;
+  peaks = await (await fetch('peaks.json')).json();
+  document.getElementById('zoom').oninput = (e) => { pps = Number(e.target.value); layout(); };
+  document.getElementById('save').onclick = save;
+  document.addEventListener('keydown', keys);
+  video.addEventListener('timeupdate', tick);
+  layout();
+  const first = kept()[0]; if (first) select(first.id, false);
+}
+
+function layout() {
+  strip.querySelectorAll('.clip').forEach(e => e.remove());
+  kept().forEach(c => strip.appendChild(card(c)));
+  drawerList(); stats();
+}
+
+function card(c) {
+  const el = document.createElement('div');
+  el.className = 'clip' + (c.kind === 'hook' ? ' hook' : c.kind === 'cta' ? ' cta' : '') + (c.id === sel ? ' sel' : '');
+  el.id = 'clip' + c.id;
+  el.style.width = Math.max(56, (c.outMs - c.inMs) / 1000 * pps) + 'px';
+  el.innerHTML = `<div class="top"><span><b>${c.id}</b>${c.kind && c.kind !== 'body' ? ' ' + c.kind : ''}</span>` +
+    `<span>${(effMs(c) / 1000).toFixed(1)}s</span></div>` +
+    `<canvas></canvas><div class="txt">${c.text}</div><div class="h l"></div><div class="h r"></div>`;
+  el.onclick = (e) => { if (!e.target.classList.contains('h')) { select(c.id, true); } };
+  el.ondblclick = (e) => {
+    if (!c.innerCuts) return;
+    const r = el.getBoundingClientRect();
+    const ms = c.inMs + (e.clientX - r.left) / r.width * (c.outMs - c.inMs);
+    const i = c.innerCuts.findIndex(g => ms >= g.fromMs - 80 && ms <= g.toMs + 80);
+    if (i >= 0) { c.innerCuts.splice(i, 1); if (!c.innerCuts.length) delete c.innerCuts; layout(); }
+  };
+  wave(el.querySelector('canvas'), c);
+  handle(el.querySelector('.h.l'), c, 'l', el);
+  handle(el.querySelector('.h.r'), c, 'r', el);
+  return el;
+}
+
+function wave(cv, c) {
+  const w = Math.max(56, (c.outMs - c.inMs) / 1000 * pps), h = 86;
+  cv.width = w * devicePixelRatio; cv.height = h * devicePixelRatio;
+  const g = cv.getContext('2d'); g.scale(devicePixelRatio, devicePixelRatio);
+  g.clearRect(0, 0, w, h);
+  const b0 = msToBucket(c.inMs), b1 = msToBucket(c.outMs), n = Math.max(1, b1 - b0);
+  g.fillStyle = 'rgba(57,211,83,0.75)';
+  const bw = Math.max(1, w / n - 0.5);
+  for (let i = 0; i < n; i++) {
+    const v = peaks.peaks[b0 + i] || 0;
+    const bh = Math.max(1, Math.pow(v, 0.7) * (h - 6));
+    g.fillRect((i / n) * w, (h - bh) / 2, bw, bh);
+  }
+  for (const gap of c.innerCuts || []) {
+    const x0 = (gap.fromMs - c.inMs) / (c.outMs - c.inMs) * w;
+    const x1 = (gap.toMs - c.inMs) / (c.outMs - c.inMs) * w;
+    g.fillStyle = 'rgba(248,81,73,0.30)';
+    g.fillRect(x0, 0, x1 - x0, h);
+    g.fillStyle = 'rgba(57,211,83,0.75)';
+  }
+}
+
+function handle(el, c, side, cardEl) {
+  el.onpointerdown = (e) => {
+    e.preventDefault(); e.stopPropagation();
+    el.setPointerCapture(e.pointerId); el.classList.add('drag');
+    const x0 = e.clientX, in0 = c.inMs, out0 = c.outMs;
+    const i = doc.clips.indexOf(c);
+    const lo = i > 0 ? doc.clips[i - 1].outMs : 0;
+    const hi = i < doc.clips.length - 1 ? doc.clips[i + 1].inMs : doc.sourceDurationMs;
+    el.onpointermove = (ev) => {
+      const dms = (ev.clientX - x0) / pps * 1000;
+      if (side === 'l') c.inMs = Math.round(Math.min(Math.max(in0 + dms, lo), c.outMs - 200));
+      else c.outMs = Math.round(Math.max(Math.min(out0 + dms, hi), c.inMs + 200));
+      cardEl.style.width = Math.max(56, (c.outMs - c.inMs) / 1000 * pps) + 'px';
+      cardEl.querySelector('.top span:last-child').textContent = ((c.outMs - c.inMs) / 1000).toFixed(1) + 's';
+      wave(cardEl.querySelector('canvas'), c);
+    };
+    el.onpointerup = () => { el.onpointermove = null; el.classList.remove('drag'); stats(); };
+  };
+}
+
+function select(id, play) {
+  const prev = document.getElementById('clip' + sel);
+  if (prev) prev.classList.remove('sel');
+  sel = id;
+  const el = document.getElementById('clip' + id);
+  if (el) { el.classList.add('sel'); el.scrollIntoView({ inline: 'nearest', block: 'nearest' }); }
+  if (play) playFrom(id);
+}
+
+function playFrom(id) {
+  const c = doc.clips[id];
+  video.currentTime = c.inMs / 1000;
+  playing = true; video.play();
+}
+
+function tick() {
+  if (!playing) return;
+  const t = video.currentTime * 1000;
+  const ks = kept();
+  let cur = ks.find(c => t >= c.inMs - 20 && t < c.outMs);
+  if (!cur) {
+    const nxt = ks.find(c => c.inMs > t - 20);
+    if (nxt) { video.currentTime = nxt.inMs / 1000; cur = nxt; }
+    else { video.pause(); playing = false; playhead.style.display = 'none'; return; }
+  }
+  const gap = (cur.innerCuts || []).find(g => t >= g.fromMs && t < g.toMs);
+  if (gap) { video.currentTime = gap.toMs / 1000; return; }
+  if (cur.id !== sel) select(cur.id, false);
+  // playhead position: sum widths of cards before cur + fraction into cur
+  let x = 14;
+  for (const c of ks) {
+    const w = Math.max(56, (c.outMs - c.inMs) / 1000 * pps) + 6;
+    if (c.id === cur.id) { x += (t - cur.inMs) / (cur.outMs - cur.inMs) * (w - 6); break; }
+    x += w;
+  }
+  playhead.style.display = 'block';
+  playhead.style.left = (x - 14) + 'px';
+}
+
+function toggleKeep(id) {
+  const c = doc.clips[id]; c.keep = !c.keep;
+  if (!c.keep && sel === id) { const ks = kept(); sel = ks.length ? ks[0].id : -1; }
+  layout();
+}
+
+function drawerList() {
+  const dl = document.getElementById('dlist');
+  const dropped = doc.clips.filter(c => !c.keep);
+  document.querySelector('#drawer summary').textContent = `dropped clips (${dropped.length})`;
+  dl.innerHTML = '';
+  dropped.forEach(c => {
+    const d = document.createElement('div');
+    d.className = 'drow';
+    d.innerHTML = `<span>${c.id}</span><span>${c.takeGroup ? 'T' + c.takeGroup : ''}</span>` +
+      `<span class="t">${c.text}</span><span>${((c.outMs - c.inMs) / 1000).toFixed(1)}s</span><button class="restore">restore</button>`;
+    d.querySelector('.restore').onclick = () => { c.keep = true; layout(); };
+    dl.appendChild(d);
+  });
+}
+
+function stats() {
+  const ks = kept();
+  const secs = ks.reduce((a, c) => a + effMs(c), 0) / 1000;
+  document.getElementById('stats').textContent = `${ks.length} clips · ${secs.toFixed(1)}s`;
+  document.getElementById('dur').textContent = secs.toFixed(1) + 's';
+}
+
+function keys(e) {
+  if (e.target.tagName === 'INPUT') return;
+  const ks = kept(); const idx = ks.findIndex(c => c.id === sel);
+  if (e.code === 'Space') { e.preventDefault(); if (video.paused) { playing = true; video.play(); } else { video.pause(); playing = false; } }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); if (idx < ks.length - 1) select(ks[idx + 1].id, false); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); if (idx > 0) select(ks[idx - 1].id, false); }
+  else if (e.key === 'Enter') { if (sel >= 0) playFrom(sel); }
+  else if (e.key === 'k') { if (sel >= 0) toggleKeep(sel); }
+}
+
+async function save() {
+  const r = await fetch('/save', { method: 'POST', headers: { 'x-base-lm': window.baseLm || '' }, body: JSON.stringify(doc) });
+  if (r.status === 409) { alert('cuts.json changed on disk (another edit). Refresh the page to load it, then redo your change.'); return; }
+  if (r.ok) window.baseLm = (await r.json()).lm;
+  document.getElementById('saved').textContent = r.ok ? 'saved ✓' : 'save failed';
+  setTimeout(() => (document.getElementById('saved').textContent = ''), 2500);
+}
+boot();
+</script>
+</body>
+</html>

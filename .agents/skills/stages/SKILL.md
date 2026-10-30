@@ -1,0 +1,32 @@
+---
+name: stages
+description: "Internal. The discipline every format runs in: a fixed sequence of stages, the current one derived from what exists on disk, and at every stage's end one line that says what comes next. Called by format skills, never by the buyer; use it whenever a format ends a step, opens a page, or the buyer asks where they are or what happens next."
+---
+
+# Stages
+
+## Goal
+
+The buyer always knows where they are and what comes next. Nothing is made before it is understood, and the first thing made is shown before everything else is made.
+
+## Reasoning
+
+A format is a wait between things the buyer sees, and a wait with no name is where a buyer gets lost. So a format is a fixed sequence of stages, each one a thing the buyer sees or a thing the buyer does, and the agent says at the end of every stage what the next one is, in the buyer's words. The current stage is derived from the files on disk, never remembered, so a folder reopened weeks later says the same thing as the chat did. What is done and what is left is derived the same way, into a plan the buyer can read (`plan.mjs`), so the answer to "where are we" is never a memory and never a question put back to the buyer. Two stages sit in every sequence on purpose. A study before the first version, because a version made from a half-read format is a guess, and the buyer sees the guess, not the format; the study is written and shown, and the render scripts refuse without it. A first version before all the versions, because one thing to react to is cheaper than twenty to undo; it is presented with its folder and its video opened at once, so the buyer sees the thing and not a path, and their feedback shapes everything after.
+
+## Pattern
+
+1. The format declares its stages in order, each with a name, one line saying what it does, whether it needs the buyer, and the one line that says what follows it. Trial Reels has seven: read, review, material, study, first version, all versions, post and learn. Each Talking Head video has eight in its own `steps.json`: footage, transcript, captions, opening, pictures, sound, final check and finished video. The look is saved once and reused.
+2. **The ladder is a loop, and the strip says which pass.** Two things repeat. The whole ladder runs once per pass over the buyer's material: Trial Reels reads the top fifty posts, makes their versions, and then goes down to the next fifty; Talking Head does one clip and then the next. Its middle repeats once per one of the buyer's own things, best first. So `plan.mjs` writes `stage.round` with the pass number and the one sentence that names it in the buyer's words (`Round 2, 58 posts further down your account`, `Video 3`), and sends the rung back to the top of the ladder when a pass is finished and there is more below. A strip that only ever draws one pass tells a buyer with fifty posts left that the work is over, which is the opposite of what the format promises. The sentence is written by the plan and never by a page: a page that counted it would be the second answer to a question the plan already answers.
+3. One script answers where the work is: `node scripts/<format>/plan.mjs` derives the current stage from what exists, writes it to `workspace/library/<format>.json` under `stage` with `next`, the round and the one line to say, and the whole plan under `plan` in the same file, and prints the lines to run now. The board and every page read it from there. Two scripts answering the same question is how a folder starts lying to itself.
+4. The format header and its tabs stay across that format's pages. Its overview shows unfinished videos and the last five outputs. The video page reads its own checklist from JSON. Keep a global strip, saved-look summary and file inventory out of the overview; they hide what needs doing. Talking Head's `steps.mjs --init --source <clip>` creates the checklist with the project. Intake, layer approvals, rendering, checks and export refresh it, and each command refuses an unmet earlier gate. Plan refreshes every project on return. A missing record is unfinished, never assumed complete.
+5. Every chat message at the end of a stage says three things, in this order: what happened, what is open in the browser or on the desk, what comes next. One line each.
+6. The study stage writes the format down in depth before any render (`references/study.md` of the format), and the page of the first version shows it. The first version is one version of one post, presented as the thing itself: `scripts/open.mjs` on its folder and its video, and three lines in chat (what changed, what stayed, what to say next); no page for a render, pages are for the reading of the account. Before it is opened it is measured against the thing it came from, number by number, and a gap the eye would not name is still a fail; a stage never shows work it did not verify, and never trusts a number whose line was not drawn on the frame and looked at (the `measuring` skill). Then a question: say what to change, or say go. Feedback and the go are recorded with `plan.mjs --feedback` and `--agreed`, and every version after applies them.
+7. The all stage makes two or three versions per post by default, more when the buyer asks, and ends by naming what the buyer does now: post them, and the tracker reads the numbers.
+
+## Examples
+
+The files land: "Nine files matched five takes and two timelapses; the two odd ones are on the page. Next we study the format in depth, then show you the first version with its folder and video open." The first version: "The first version of the Qwythos post is rendered; the page, the folder and the video are open. Say what to change, or say go, and every post with files gets two or three versions."
+
+## Counter-examples
+
+Rendering before the study is written. Making every version before the first was agreed. Presenting a version without opening the folder and the video. Opening a page for a version, or repeating the study to the buyer: they see the video, the study is the agent's. Ending a stage with a summary and no next line. Drawing the last rung ticked when the buyer has another pass to make. Putting the strip between a page's one ask and the answer to it. Writing the plan to two files. Guessing the stage from the conversation instead of the files. Naming the next stage in the agent's words (a job id, a script) instead of the buyer's (a page, a folder, a video, a thing to say).

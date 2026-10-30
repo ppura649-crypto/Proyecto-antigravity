@@ -1,0 +1,11 @@
+# Plan Visual: `battery-myth` (Desmitificación Tecnológica Multi-Red · 1080×1920 @ 60 fps)
+
+Elemento continuo de escenario: **Telemetría de Laboratorio de Batería (`TechTelemetryStrip`)** en `y = 530` + **Ventana Fotográfica con Escaneo Óptico (`TechPhotoWindow`)** en `y = 644` + **Panel de Evidencia Viva (`y = 1062..1432`)**, todo contenido en `x = 110..970` y `y = 520..1450`.
+
+1. **`hook` (`dark`)**: Fotografía nocturna del celular cargando (`tech-01.jpg`). En `"no"`, un sello rojo de impacto **`MITO FALSO`** tacha `"CARGAR TODA LA NOCHE"`. En `"2"`, se iluminan dos alertas de peligro real (`1. Calor > 35°C`, `2. Agotar a 0%`).
+2. **`origin` (`light`)**: Comparativa de estudio entre batería NiCd de los años `90` y celda actual de litio (`tech-02.jpg`). En `"90"` y `"sobrecarga"`, la tarjeta izquierda marca `1995 · Níquel (NiCd) -> Efecto Memoria / Sobrecarga`, contrastada con `2026 · Iones de Litio -> Control Digital`.
+3. **`chip` (`light`)**: Macro del microchip gestor PMIC (`tech-03.jpg`). Debajo, gráfica viva de **Carga Optimizada Nocturna**: la curva sube y se estaciona en `"80%"` durante la madrugada, y en `"100%"` / `"válvula"` cierra el paso a `0.0 W · CORRIENTE CORTADA`.
+4. **`heat` (`dark`)**: Termografía infrarroja del celular calentándose bajo la almohada (`tech-04.jpg`). Ficha oficial de **Apple Support** con termómetro dinámico que sube de `22°C` a `42°C`, cruzando la línea crítica de `"35"` grados (`> 35°C = DAÑO PERMANENTE`).
+5. **`cycles` (`dark`)**: Corte 3D de electrodos degradados vs. flujo limpio (`tech-05.jpg`). Carrera comparativa de barras según **Battery University BU-808**: en `"400"` la barra roja (`100% -> 0%`) se frena en `400 CICLOS`, mientras que en `"1000"` la barra esmeralda (`80% -> 20%`) se dispara a `+1,000 CICLOS (2.5x VIDA)`.
+6. **`rule` (`light`)**: Celular cargando fresco en escritorio sin funda (`tech-06.jpg`) con etiqueta `📌 Guarda esta regla`. Tarjeta resumen guardable de 3 reglas: `1. Sin funda si calienta (< 35°C)`, `2. Conectar antes del 20%`, `3. Carga nocturna 100% segura`.
+7. **`cta` (`dark`)**: Mano sosteniendo smartphone (`tech-07.jpg`) + interfaz redibujada de **Condición de Batería (`Capacidad máxima: 89%`)** y caja de comentarios interactiva donde un cursor escribe `"89% · Equipo 20-80"` y pulsa `Publicar`, cerrando en bucle continuo hacia el segundo `0.0`.

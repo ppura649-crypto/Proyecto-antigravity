@@ -1,0 +1,35 @@
+/* Full Visual: the first-video card, the three steps and one video's page. Built on the Product Demo flow styles. */
+#keyframes-os .fv-steps {list-style:none;margin:26px 0 30px;padding:0;border-top:1px solid var(--os-line)}
+#keyframes-os .fv-steps li {display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--os-line)}
+#keyframes-os .fv-steps li > div {display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+#keyframes-os .fv-steps strong {font-size:15px;font-weight:600;color:var(--os-ink)}
+#keyframes-os .fv-steps span:not(.fv-number) {font-size:13px;color:var(--os-mid)}
+#keyframes-os .fv-number {flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;border:1px solid var(--os-line);color:var(--os-mid);background:#fff}
+#keyframes-os .fv-progress li[data-state=done] .fv-number {background:var(--os-ink);border-color:var(--os-ink);color:#fff}
+#keyframes-os .fv-progress li[data-state=current] .fv-number {border-color:var(--os-ink);color:var(--os-ink)}
+#keyframes-os .fv-progress li[data-state=current] span:not(.fv-number) {color:var(--os-ink);font-weight:600}
+#keyframes-os .fv-progress li[data-state=later] strong {color:var(--os-muted)}
+#keyframes-os .fv-first {max-width:560px}
+#keyframes-os .fv-first h2 {font-size:26px;margin:0 0 8px}
+#keyframes-os .fv-project {max-width:640px}
+#keyframes-os .fv-panel {margin-top:6px}
+#keyframes-os .fv-panel h2 {font-size:22px;margin:0 0 6px}
+#keyframes-os .fv-panel > .muted {font-size:14px;margin:0 0 4px}
+#keyframes-os .fv-panel .field textarea {min-height:150px}
+#keyframes-os .fv-panel > .btn.ghost {margin-top:8px}
+#keyframes-os .fv-video {max-height:70vh;width:auto;max-width:100%;aspect-ratio:9/16;background:#000;border-radius:10px}
+#keyframes-os .fv-voice {margin-top:22px}
+#keyframes-os .fv-voice .onb-key {margin:18px 0 22px}
+#keyframes-os .fv-voice .onb-key-label {display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px}
+#keyframes-os .fv-voice .onb-key-label label {font-weight:600}
+#keyframes-os .fv-voice .onb-key-label a {color:var(--os-mid);font-size:12px;text-decoration:underline;text-underline-offset:4px}
+#keyframes-os .fv-voice .onb-key input {width:100%;margin-top:10px;padding:13px 14px;border:1px solid #bdc3cb;border-radius:7px;background:#fff;color:var(--os-ink);font:inherit;font-size:14px}
+#keyframes-os .fv-voice .onb-key p {font-size:12px;color:var(--os-mid);margin:8px 0 0}
+#keyframes-os .fv-voice .inline-alert:empty, #keyframes-os .fv-flow .inline-alert:empty {display:none}
+#keyframes-os .fv-back {margin-top:34px}
+@media(max-width:540px){
+ #keyframes-os .fv-first h2 {font-size:22px}
+ #keyframes-os .fv-voice .onb-key input, #keyframes-os .fv-flow textarea {font-size:16px}
+}
+#keyframes-os .fv-flow textarea[data-field=fvSubject] {min-height:84px}
+#keyframes-os .fv-notes {margin-top:14px}

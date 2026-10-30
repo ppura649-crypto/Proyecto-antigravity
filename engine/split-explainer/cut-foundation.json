@@ -1,0 +1,18 @@
+{
+  "source": "talking-head 0.4.6",
+  "unchanged_files": {
+    "take.py": "479aa89a420b8afac8388cdd59d01c7afa2be48752d51c2b5734d5cce3c79f36",
+    "build_cuts.py": "cbbd1171878a1cec6b95f3f127aed957586961d291b702443131d67de6bdf54f",
+    "select_takes.py": "2080e4df0af1be7b5ee4e68fd6ad4dd8c09c52f34af07f2e3d9087642a755108",
+    "cut_variants.py": "7a7ac8d11414aa00677072bf08b8e85d1275cf40f4e3fb9198de017d82e70031",
+    "render_spine.py": "cadead82555c8690104852630db6f2171f3129f1e62db66478d36280b1195733",
+    "master_audio.py": "27cf695d500aa9cdcbe76908bf8f2a5a687510e226251e822805fa119014dbb0",
+    "verify_cut.py": "4330aa0587f36a4935b75293ce4a5792327cd9e0ab98b5cf82459a15345673ef",
+    "cleanup.py": "8689524a97694648e09b265744c9216bc110c9f47418c152e39d2bb77db2b0b7",
+    "gaze_tile.py": "f39e49576e127a79fd0746f18bbc26ba716bf8d0fbee57ed4d449e8ee84076b6",
+    "gaze_nudge.py": "75cc64ae9684d87b98fc569d7696f679df55e179fa0d4accb5d154dab1c4a3ca",
+    "lock_layer.py": "fe3d61a755b2973d48f9a99471912993be1149a94a669210fd0d735730026a48",
+    "read_fit.py": "56e65a976c34e93f0bd257b97a8f8c058f14528804bd4f84cb1a75ffea0e809e"
+  },
+  "note": "Preparation, cut selection, cleanup, mastering and verification are exact copies. workflow.py is a separate format adapter."
+}

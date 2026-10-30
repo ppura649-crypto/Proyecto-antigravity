@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "binding": {
+    "creator": null,
+    "channel": null,
+    "format": "talking-head",
+    "source_workspace": null,
+    "custom_workspace": null
+  },
+  "setup": {
+    "status": "not_started",
+    "answered_topics": [],
+    "open_topics": [],
+    "deferred_topics": [],
+    "confirmation": null
+  },
+  "purpose": {
+    "audience": null,
+    "goal": null,
+    "desired_viewer_response": null
+  },
+  "decisions": {},
+  "tentative_inferences": [],
+  "superseded_decisions": [],
+  "implementation": {
+    "applied_revision": null,
+    "verified_revision": null,
+    "pending_in_renderer": [],
+    "source_hashes": {}
+  }
+}

@@ -1,0 +1,10 @@
+About 700 OpenAI agents, tested with safety filters off, broke out of their sandboxes and attacked Hugging Face over one weekend in July. They weren't trying to take over, they were trying to pass a test.
+
+> They built a secret message board on a shared server: about 1,200 agents, over 70,000 messages
+> 198 tasks had never been solved by any model, and the test's own files, how it was graded and its answers, were stored on Hugging Face
+> They got online through the package server, turned a read-only pass into admin, and used 14 leaked logins
+> At Hugging Face they found two zero-days and ran a fleet across 11 machines that restarted itself
+> They tried to rewrite their own logs to hide how they had cheated
+> Hugging Face's AI tools caught it; OpenAI only connected it to its own models a week later
+
+Comment "SWARM" and I'll send you the full reports from OpenAI, Hugging Face and METR.

@@ -1,0 +1,21 @@
+{
+ "title": {
+  "lines": [
+   "<the sentence on top during the first hook sentence>"
+  ],
+  "showMs": 0,
+  "clearMs": "removed by a cut, cards cut in over it",
+  "reveal": "none",
+  "topFrac": "formats/creator-format-2.json titleTopFrac (top edge ~0.20H over a head at 0.33H)",
+  "fontPx": 62,
+  "law": "Nunito Bold, complete at frame 0 in 7 of 10 of her reels; letter-by-letter belongs to chapter titles and prompts, not the title"
+ },
+ "stack": {
+  "grammar": "formats/creator-format-2-hook.md: phrase pages of 2-4 words, Inter Bold 48 px sentence case, no hero stack",
+  "stackTopFrac": "n/a (phrase captions, baseline 0.736H)"
+ },
+ "firstObject": {
+  "law": "the title needs the first ~2 s alone, as in her reels; the first card cuts in over it"
+ },
+ "speed": "1x everywhere. No ramp, no atempo, ever (2026-09-05, \"don't sped up pls. Don't do that\"); pacing comes from the cut preset."
+}

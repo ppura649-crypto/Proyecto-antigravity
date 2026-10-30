@@ -1,0 +1,20 @@
+{
+  "voice": {
+    "id": "gWaDC0oXAheKoZfljzuI",
+    "name": "Snap - Fast-paced Viral Narrator, American (ElevenLabs library), v3 + audio tags (v6 script, rushed tags, one take, silences cut 0.2 s, hook untouched)",
+    "model": "eleven_v3",
+    "speed": 1.0,
+    "stability": 0.5,
+    "similarity": 0.8,
+    "style": 0.0
+  },
+  "theme": {
+    "motion": "measured",
+    "caption": {
+      "leadMs": 80
+    }
+  },
+  "chrome": {
+    "type": "none"
+  }
+}

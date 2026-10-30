@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "format": "full-visual",
+  "directions": ".agents/skills/full-visual-customization/SKILL.md",
+  "page": {
+    "opens": "A finished example reel plays: the voice, the word-by-word caption with its boxed key word, and the real things drawn under it.",
+    "asks": "Keep the house look and voice, or make it yours: the caption, the background, the voice, the words, a reference to copy.",
+    "rule": "The motion, the visuals and the method are the format; they are not setup questions. A draft is not a saved preference. Never repeat setup for a new reel.",
+    "writes": "The full-visual-customization skill saves the choices in workspace/library/full-visual/profile.json and workspace/library/full-visual.preferences.md, after a short test render the buyer accepted."
+  },
+  "questions": [
+    {"id":"reference","type":"text","ask":"Is there a creator or a reel you want this to look or sound like?","default":"none: the house look","changes":"Read by the agent and mapped onto the caption, ground and voice fields; anything the engine cannot do is named, not faked."},
+    {"id":"caption","type":"object","ask":"Keep this caption or change its font, size, colours, key word marker or position?","default":"the house caption: Figtree 74 px, white active word, grey said words, blue selection box","changes":"reel.json theme: font, caption, marker"},
+    {"id":"ground","type":"choice","ask":"Dark or light background, and with or without the faint grid?","options":["dark with grid","light with grid","my own colours"],"default":"dark with grid","changes":"reel.json theme: grounds, gridPitch"},
+    {"id":"voice","type":"object","ask":"Which voice service, and which voice?","default":{"provider":"elevenlabs","voice":"the house narrator, auditioned first"},"changes":"reel.json voice, or a voice.json for OpenAI or Fish Audio; the voice is picked by ear from short auditions"},
+    {"id":"words","type":"choice","ask":"Should the format write the script, or will you bring your own transcript?","options":["write it","my transcript, as is"],"default":"write it","changes":"Which source stage 1 starts from; the comment keyword and the post caption shape"},
+    {"id":"topics","type":"text","ask":"What do you want your reels to be about, and which creators do you learn from?","default":"the house research lanes","changes":"The research lanes and stance read before every reel"}
+  ],
+  "example": "Render about nine seconds of an example reel with the chosen look into workspace/output/<date>-full-visual-look-test/look-test.mp4, beside the house look."
+}

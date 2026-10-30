@@ -1,0 +1,9 @@
+{
+ "title": {"lines": ["<what the video pays off, line 1>", "<line 2 or nothing>"], "showMs": 0, "clearMs": 2100, "reveal": "none", "look": "plain",
+           "topFrac": "geometry.suggest.titleTopFrac", "fontPx": 52,
+           "law": "complete at frame 0, two lines max, no wrap at fontPx, mid-screen above the head, no card, gone by ~2.1 s; caption font"},
+ "stack": {"grammar": "formats/creator-format-1-hook.md: ALL CAPS, 1-2 words per line, connectors small white, mid line 1.45x accent, one hero fit to ~64% width in terracotta; punch line as its own stack; every hero >= 600 ms",
+           "stackTopFrac": "geometry.suggest.stackTopFrac (format.json owns it, never a literal in code)"},
+ "firstObject": {"law": "a card or float up inside 0.5 s that is not the title; the punch stack owns the screen alone"},
+ "speed": "1x everywhere. No ramp, no atempo, ever (2026-09-05, \"don't sped up pls. Don't do that\"); pacing comes from the cut preset."
+}

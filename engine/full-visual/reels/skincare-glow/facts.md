@@ -1,0 +1,8 @@
+# Datos verificados — Skincare Glow (skincare-glow)
+
+- AAD (American Academy of Dermatology): Lavar con agua tibia ~60 s sin agua caliente ni fricción agresiva; aplicar en orden del más ligero al más denso; evitar saturar la barrera cutánea con exceso de productos; FPS 30+ diario al final de la mañana. https://www.aad.org/public/everyday-care/skin-care-basics/care/skin-care-routine
+- Flament et al., 2013 (*Clinical, Cosmetic and Investigational Dermatology*, PMC3790843): La radiación UV causa aproximadamente el 80% de los signos visibles de envejecimiento facial. https://pmc.ncbi.nlm.nih.gov/articles/PMC3790843/
+- CeraVe Limpiador Hidratante y Crema Hidratante: 3 ceramidas esenciales (1, 3, 6-II) + ácido hialurónico para limpiar y sellar la barrera cutánea sin resecar. https://www.cerave.com/skincare/cleansers/hydrating-facial-cleanser
+- The Ordinary Niacinamide 10% + Zinc 1%: Suero acuoso con 10% niacinamida y 1% zinc PCA para calmar rojeces, afinar poros y equilibrar sebo. https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html
+- Beauty of Joseon Relief Sun: Rice + Probiotics (FPS 50+ PA++++): 30% extracto de arroz + probióticos de granos fermentados, acabado hidratante luminoso sin rastro blanco; medida recomendada de 2 dedos para rostro y cuello. https://beautyofjoseon.com/products/relief-sun-rice-probiotics
+- La Roche-Posay Retinol B3 Serum: 0.3% retinol + vitamina B3 calmante, aplicado de noche sobre piel limpia y seca (dosis de 1 guisante), iniciando 2 noches por semana; resultados clínicos en 4 a 8 semanas de constancia. https://www.laroche-posay.us/our-products/face/face-serum/retinol-b3-pure-retinol-serum-3337875694469.html

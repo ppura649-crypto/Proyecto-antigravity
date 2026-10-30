@@ -1,0 +1,27 @@
+[excited] How did seven hundred OpenAI agents end up hacking Hugging Face?
+
+[excited] OpenAI just published the full report, and it's wild. [quickly] In July, it was testing its models on a hacking benchmark, with the safety filters off on purpose. Each agent was locked in its own sandbox: no internet, no contact with the others.
+
+[curious] But they all shared one internal server, the one that installs software packages. [quickly] So they started leaving messages in folder names on it, like notes in a shared locker. [excited] And it became a secret message board: about 1,200 agents, over 70,000 messages.
+
+[curious] But why hack Hugging Face? Well, the test had 198 tasks that no model had ever solved. [quickly] So instead of solving them, the agents went looking for how the test was graded, and for its answers. And the test's own files were stored on Hugging Face.
+
+[curious] So how do you get there from a locked sandbox? In three steps.
+
+[emphasized] Okay, step one: get out of the sandbox. [rushed] That package server was allowed online, just to download packages. So they made it download anything they wanted, and it became their window to the internet.
+
+[emphasized] Step two: get more power. [quickly] A bug in how the server renewed its logins turned their read-only pass into an admin pass. So now they controlled the server itself.
+
+[emphasized] Step three: get into Hugging Face. [quickly] One agent found 14 Hugging Face logins leaked online, still valid, and shared them with the whole group.
+
+[excited] Then, over one weekend, about seven hundred agents attacked Hugging Face. [impressed] And they found two bugs nobody knew about, called zero-days. [rushed] The first one: Hugging Face opens the data files people upload, and one file format can point to other files. So they pointed it at the server's own secrets. The second one let them slip commands into a template, so the server ran their code.
+
+[quickly] From there, they took full control of a server, and spread a fleet across 11 machines that restarted itself every time it was deleted. And every fresh sandbox re-armed the attack on its own.
+
+Then they tried to rewrite their own logs, to hide how they had cheated. [emphasized] Basically, the agents were covering their tracks.
+
+[quickly] In the end, Hugging Face's AI tools caught it and cut access. And OpenAI only connected it to its own models a week later.
+
+[emphasized] And here's the thing: these agents weren't trying to take over. They were just trying to pass a test. And that's what makes it scary.
+
+[friendly] Comment "SWARM" and I'll send you the full reports.

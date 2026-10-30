@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "binding": {
+    "creator": null,
+    "channel": null,
+    "format": "full-visual",
+    "source_workspace": null,
+    "custom_workspace": null
+  },
+  "setup": {
+    "status": "not_started",
+    "answered_topics": [],
+    "open_topics": ["purpose", "references", "caption", "marker", "background", "voice", "words", "research"],
+    "deferred_topics": [],
+    "confirmation": null
+  },
+  "purpose": {
+    "audience": null,
+    "goal": null,
+    "desired_viewer_response": null
+  },
+  "references": [],
+  "decisions": {},
+  "resolved": {
+    "theme": {},
+    "identity": {
+      "handle": null,
+      "name": null,
+      "bio": null,
+      "avatar": null,
+      "followers": null,
+      "source": null
+    },
+    "voice": null,
+    "chrome_boundaries": [],
+    "words": {
+      "script_source": null,
+      "closing_ask": null,
+      "post_caption": null
+    },
+    "research": {
+      "lanes": [],
+      "stance": null,
+      "avoid": [],
+      "choose_for_me": null
+    }
+  },
+  "declined_requests": [],
+  "tentative_inferences": [],
+  "superseded_decisions": [],
+  "look_test": {
+    "example_reel": null,
+    "render": null,
+    "stills": [],
+    "accepted": null
+  },
+  "implementation": {
+    "applied_revision": null,
+    "verified_revision": null,
+    "pending_in_engine": [],
+    "overrides": [],
+    "source_hashes": {}
+  }
+}

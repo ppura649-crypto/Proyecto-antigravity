@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+/* Overlapping skill folders, Claude-Code-folder-art style. Transparent bg. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: transparent; }
+body { width: 620px; height: 470px; position: relative;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+.f { position: absolute; filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.35)); }
+.f .tab {
+  position: absolute; top: 0; left: 0; height: 46px; padding: 0 22px;
+  display: flex; align-items: center;
+  font-size: 21px; font-weight: 700; color: rgba(24, 24, 24, 0.85);
+  border-radius: 12px 12px 0 0;
+}
+.f .body { position: absolute; top: 38px; left: 0; right: 0; bottom: 0;
+  border-radius: 0 16px 16px 16px; }
+
+.back  { left: 290px; top: 0;    width: 320px; height: 225px; }
+.back  .tab  { background: #a78bfa; }
+.back  .body { background: #a78bfa; }
+
+.mid   { left: 145px; top: 70px; width: 320px; height: 225px; }
+.mid   .tab  { background: #7fcb5b; }
+.mid   .body { background: #7fcb5b; }
+
+.front { left: 0; top: 145px;    width: 350px; height: 250px; }
+.front .tab  { background: #e07850; }
+.front .body { background: #e07850; }
+.front .agent {
+  position: absolute; left: 50%; top: 96px; transform: translateX(-50%);
+  width: 156px; image-rendering: pixelated; z-index: 1;
+}
+</style></head>
+<body data-vw="620" data-transparent="1">
+  <div class="f back"><span class="tab">redis/</span><div class="body"></div></div>
+  <div class="f mid"><span class="tab">hetzner/</span><div class="body"></div></div>
+  <div class="f front"><span class="tab">frontend-ui/</span><div class="body"></div><img class="agent" src="claude-agent-icon.png"></div>
+</body></html>

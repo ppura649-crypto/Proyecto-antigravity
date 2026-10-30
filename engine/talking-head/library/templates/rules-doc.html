@@ -1,0 +1,99 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="gh-markdown.css">
+<style>body { width: 780px; }</style>
+</head>
+<body data-vw="780">
+<div class="markdown-body">
+<h1>CLAUDE.md</h1>
+<p>Rules for the agent. Read this before every task.</p>
+
+<h2>General</h2>
+<ul>
+<li><strong>ALWAYS</strong> read the whole file before editing</li>
+<li><strong>NEVER</strong> create new files unless explicitly asked</li>
+<li><strong>ALWAYS</strong> ask before installing any dependency</li>
+<li><strong>NEVER</strong> use emojis in commit messages</li>
+<li><strong>IMPORTANT:</strong> always run <code>npm run lint</code> before finishing</li>
+<li><strong>NEVER</strong> touch files outside <code>src/</code></li>
+<li><strong>ALWAYS</strong> show the full path of files you create</li>
+</ul>
+
+<h2>Code style</h2>
+<ul>
+<li><strong>ALWAYS</strong> use named exports</li>
+<li><strong>NEVER</strong> use default exports</li>
+<li><strong>ALWAYS</strong> use <code>const</code>, never <code>let</code>, never <code>var</code></li>
+<li><strong>NEVER</strong> write functions longer than 40 lines</li>
+<li><strong>ALWAYS</strong> add JSDoc to every exported function</li>
+<li><strong>NEVER</strong> use <code>any</code></li>
+<li><strong>ALWAYS</strong> prefer early returns</li>
+<li><strong>NEVER</strong> nest ternaries</li>
+<li><strong>ALWAYS</strong> destructure props at the top of the component</li>
+</ul>
+
+<h2>Git</h2>
+<ul>
+<li><strong>NEVER</strong> commit directly to <code>main</code></li>
+<li><strong>ALWAYS</strong> branch from latest <code>main</code></li>
+<li><strong>NEVER</strong> force push</li>
+<li><strong>ALWAYS</strong> write commit messages in imperative mood</li>
+<li><strong>NEVER</strong> commit <code>.env</code> files</li>
+<li><strong>ALWAYS</strong> squash before merging</li>
+<li><strong>NEVER</strong> rebase a shared branch</li>
+</ul>
+
+<h2>Testing</h2>
+<ul>
+<li><strong>ALWAYS</strong> write tests for new code</li>
+<li><strong>NEVER</strong> delete a failing test</li>
+<li><strong>ALWAYS</strong> run the full suite before pushing</li>
+<li><strong>NEVER</strong> mock what you don't own</li>
+<li><strong>ALWAYS</strong> test edge cases</li>
+<li><strong>NEVER</strong> use snapshots for logic</li>
+</ul>
+
+<h2>Error handling</h2>
+<ul>
+<li><strong>NEVER</strong> swallow exceptions</li>
+<li><strong>ALWAYS</strong> log errors with context</li>
+<li><strong>NEVER</strong> use bare <code>except</code></li>
+<li><strong>ALWAYS</strong> validate inputs at the boundary</li>
+<li><strong>NEVER</strong> return <code>null</code> on failure, throw instead</li>
+</ul>
+
+<h2>Imports</h2>
+<ul>
+<li><strong>ALWAYS</strong> use absolute imports</li>
+<li><strong>NEVER</strong> import from <code>../..</code></li>
+<li><strong>ALWAYS</strong> group imports by origin</li>
+<li><strong>NEVER</strong> use wildcard imports</li>
+</ul>
+
+<h2>Naming</h2>
+<ul>
+<li><strong>ALWAYS</strong> use camelCase for variables</li>
+<li><strong>NEVER</strong> abbreviate names</li>
+<li><strong>ALWAYS</strong> prefix booleans with <code>is</code> or <code>has</code></li>
+<li><strong>NEVER</strong> use single-letter variables</li>
+</ul>
+
+<h2>Formatting</h2>
+<ul>
+<li><strong>ALWAYS</strong> run prettier before committing</li>
+<li><strong>NEVER</strong> change formatting of untouched lines</li>
+<li><strong>ALWAYS</strong> keep lines under 100 characters</li>
+<li><strong>NEVER</strong> leave trailing whitespace</li>
+</ul>
+
+<h2>Agent behavior</h2>
+<ul>
+<li><strong>IMPORTANT:</strong> never invent APIs that don't exist</li>
+<li><strong>ALWAYS</strong> check the docs first</li>
+<li><strong>NEVER</strong> assume a library is installed</li>
+<li><strong>IMPORTANT:</strong> do exactly what is asked, nothing more</li>
+<li><strong>NEVER</strong> refactor code you were not asked to touch</li>
+<li><strong>ALWAYS</strong> ask before deleting anything</li>
+</ul>
+</div>
+</body></html>

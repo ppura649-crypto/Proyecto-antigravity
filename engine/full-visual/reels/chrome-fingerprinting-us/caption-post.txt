@@ -1,0 +1,10 @@
+AliExpress runs 2 hidden audio programs in your browser, at volume zero. A developer only noticed because their Bluetooth headphones stopped switching to their phone while the tab was open.
+
+> it's called audio fingerprinting: every device processes the same silent sound a tiny bit differently, and that difference is one more clue to recognise your device
+> the same scripts also measure your graphics card, screen size, memory and mouse movements, then send the results to Alibaba
+> deleting your cookies doesn't help, the page just measures you again
+> Firefox has made Web Audio give nearly the same result on every computer since version 118 (2023)
+> Brave adds random noise, so every site sees a different fingerprint
+> with default settings, Chrome fails a fingerprinting test on privacytests.org that Safari and Brave pass
+
+Save this if you still use Chrome.

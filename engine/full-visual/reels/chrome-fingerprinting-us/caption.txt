@@ -1,0 +1,67 @@
+# Chrome fingerprinting. Script: script.txt (his transcript, verbatim). Facts and sources: facts.md. Voice: reel.json.
+== hook | ground: dark
+Google *Chrome* is
+just another *spyware,*
+let me tell you / exactly *why:*
+== developer | ground: light
+Ok so here's what / just *happened:*
+A 🧑‍💻 *developer* just proved
+that *AliExpress* and Alibaba
+are *spying* on us
+and we don't really know
+what they're *using* it for
+or what they're doing.
+== sound | ground: dark
+Basically, when you open
+*AliExpress* or Alibaba
+on your 💻 *computer,*
+it starts playing / a 🔊 *sound.*
+But you *can't* hear it,
+because the volume / is set to *zero.*
+It's running inside / your *browser,*
+and it's used to
+*recognize* your device.
+== fingerprint | ground: dark
+And this is what's called
+*fingerprinting.*
+Every computer processes
+that audio signal
+a little *differently,*
+depending on the *processor,*
+sound card, drivers,
+and operating *system.*
+We're talking about / *tiny* differences.
+Nothing you'd / ever *notice,*
+but enough to / create a *fingerprint*
+for your computer.
+== known | ground: light
+This is actually
+a *well-known* technique.
+It's been around / for *years,*
+and *plenty* of companies
+do the same thing.
+== choose | ground: light
+But the *only* way
+to protect yourself
+is through your *browser.*
+Which browser you / choose *matters.*
+Because this technique
+is so well known,
+a lot of browsers / have already taken
+steps to *stop* it.
+== browsers | ground: light
+🦊 *Firefox,* for example,
+has blocked / audio fingerprinting
+since *2023.*
+🦁 *Brave* adds / a little random noise
+to the results,
+so the fingerprint / *changes* each time.
+== chrome | ground: dark
+Unfortunately, *Chrome*
+and *Safari* don't offer
+anything / *comparable*
+by default.
+== cta | ground: light
+So *switch* browsers.
+And if you want / more tips like this,
+*follow* me.

@@ -1,0 +1,23 @@
+[curious] How do Chinese AI companies copy Anthropic models?
+
+[quickly] Anthropic just released a full report explaining how. It says Alibaba collected over 151 million exchanges with Claude in three months to train their Qwen models. [curious] And I wanted to understand how that works.
+
+[emphasized] The technique is called distillation. [matter-of-fact] You take a stronger model, called the teacher, collect its answers, check their quality, and use them to train your own model, called the student.
+
+Training changes the model's weights: the billions of numbers the model calculates with.
+
+[matter-of-fact] First, the model cuts your text into tokens, small pieces of words, and turns each one into a list of numbers. Then, layer after layer, it multiplies those numbers by its weights. Along the way, it looks back at the earlier words, so it understands each word in context.
+
+At the end, it gives a probability to every possible next token. [quickly] It picks one, adds it to the sentence, and repeats.
+
+[matter-of-fact] During training, the teacher's answer tells the student which token should come next. If the student gives it a low probability, training calculates how to adjust its weights to fix that mistake. [impressed] Repeat that millions of times, and the student starts answering like the teacher, without ever contacting it.
+
+[serious] But here's the catch. All the numbers in between, called hidden states, stay inside Claude. And Claude only shows the token it picked, not its full probabilities. [curious] Those would tell the student that the teacher was hesitating between two words, not just which one it chose. [emphasized] So the student only learns from the final text, not from how the teacher got there.
+
+[impressed] That's why Alibaba went after Claude's thinking, the step-by-step reasoning it writes before answering. It's the closest thing to seeing how it thinks. [matter-of-fact] And Anthropic now only shows a summary of it.
+
+A smaller student also can't hold every skill. And it can learn the examples too closely, then struggle with problems it has never seen. That's called overfitting.
+
+[emphasized] So collecting answers can transfer useful skills. The test is whether your model can solve problems it hasn't seen.
+
+[friendly] And if you want more breakdowns like this, follow me.

@@ -1,0 +1,22 @@
+# Claves privadas (NUNCA subir a GitHub)
+.env
+.env.local
+.env.*.local
+
+# Dependencias y binarios pesados auto-instalables (>100 MB)
+node_modules/
+models/
+whisper.cpp/
+dist/
+.installed/
+.keyframes/
+
+# Copias temporales de render que ya están entregadas en workspace/output/
+engine/full-visual/public/
+engine/full-visual/output/
+engine/full-visual/reels/*/*.mp4
+engine/full-visual/reels/*/voice.raw.mp3
+engine/full-visual/reels/*/voice.pre_tempo.mp3
+
+# Archivos de sistema
+.DS_Store

@@ -1,0 +1,17 @@
+{
+  "version": 1, "format": "split-explainer",
+  "directions": ".agents/skills/split-explainer/references/presentation.md",
+  "page": {
+    "opens": "Three composed stills over the supplied recording, showing split, full visual and presenter.",
+    "asks": "Keep the proposed look or change the framing, captions and colors.",
+    "rule": "Reuse instructions already supplied. A draft is not a saved preference. Never repeat setup for a new recording.",
+    "writes": "The agent saves the explicit choices using scripts/split-explainer/preferences.mjs."
+  },
+  "questions": [
+    {"id":"framing","type":"choice","ask":"How much room should the upper visual have?","options":["balanced","more visual space","more presenter space"],"changes":"The split balance and crop; the three modes remain available when useful."},
+    {"id":"captions","type":"choice","ask":"How should the captions feel?","options":["compact with selected emphasis","calm and consistent","large and expressive"],"changes":"Grouping, size and emphasis, inspected over the actual recording."},
+    {"id":"palette","type":"object","ask":"Keep these colors or use your own?","changes":"Editorial background, text and accent; real interfaces retain their native appearance."},
+    {"id":"type","type":"choice","ask":"Keep this type or use a preferred font?","options":["keep the shown type","use my font"],"changes":"The actual installed caption font, with a rendered specimen."}
+  ],
+  "example": "Render the three modes over the supplied frame; identify the starter's plain lower crop."
+}

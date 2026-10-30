@@ -1,0 +1,17 @@
+{
+ "name": "guest-flat",
+ "who": "the guest (@guest), the guest spec of 2026-09-03: one setting for every caption",
+ "format": "projects/edit-b/format.json (seed: Avenir Next Bold 700, 46 px, white, uppercase, heroes capped at base, ctaFlat)",
+ "style": "creator-format-1",
+ "overlay": "creator-format-1",
+ "hookGrammar": "formats/creator-format-1-hook.md for the stack shape, in the flat setting (no accent colour, no bigger hero, lines centred). The TITLE is a native Instagram text label: black words on a white rectangle (HookTitle look 'label'), complete at frame 0, reveal 'none' (the guest 2026-09-05)",
+ "systemGrammar": "formats/creator-format-1-system.md",
+ "visualGrammar": "formats/creator-format-1-visuals.md",
+ "cardLanguage": "same as Creator Format 1; the small-caps header row (cards/Head.tsx) on black cards; names under marks Avenir Next Bold 46 px uppercase",
+ "families": "library/README.md (every kind) + remotion/src/cards/",
+ "sfx": "references/05-sound.md palette",
+ "pacing": "d-hard",
+ "reference": "assets/reference/videos/jina-search.mp4 (cut-tight) + ~/Downloads/talking-head-edit-b-full-v4.mp4",
+ "hookTemplate": "packs/guest-flat/hook.template.json",
+ "cardSurface": "black plates today, and they stay in the cuts the creator has already approved. For a NEW build the creator asks for light or white surfaces over the black-card treatment (the guest 2026-09-05, 'do not recolor every black visual in this cut before shipping; log the palette preference for the next build')"
+}

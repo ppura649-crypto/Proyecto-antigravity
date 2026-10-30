@@ -1,0 +1,60 @@
+{
+  "voice": {
+    "id": "gWaDC0oXAheKoZfljzuI",
+    "name": "Snap - Fast-paced Viral Narrator, v3 + high-energy Spanish tags",
+    "model": "eleven_v3",
+    "lang": "es",
+    "speed": 1.08,
+    "stability": 0.5,
+    "similarity": 0.80,
+    "style": 0.0
+  },
+  "theme": {
+    "motion": "measured",
+    "caption": {
+      "leadMs": 80,
+      "size": 75,
+      "lineHeight": 84
+    },
+    "marker": {
+      "style": "select",
+      "color": "#FF1E56",
+      "fill": 0.22,
+      "stroke": 3.5,
+      "handle": 24
+    },
+    "grounds": {
+      "light": {
+        "bg": "#EDF3FF",
+        "grid": "rgba(15, 23, 42, 0.048)",
+        "ink": "#070B14",
+        "spoken": "#7C8BA1",
+        "card": "#FFFFFF",
+        "hairline": "#CBD5E1",
+        "dim": "#334155"
+      },
+      "dark": {
+        "bg": "#060911",
+        "grid": "rgba(0, 229, 255, 0.052)",
+        "ink": "#FFFFFF",
+        "spoken": "#64748B",
+        "dim": "#94A3B8",
+        "card": "#0F1726",
+        "hairline": "#1E293B"
+      }
+    },
+    "roles": {
+      "ok": "#00E699",
+      "alarm": "#FF1E56",
+      "positive": "#00E5FF",
+      "brand": "#FF1E56",
+      "link": "#38BDF8"
+    }
+  },
+  "chrome": {
+    "type": "pill",
+    "label": "Los 3 ajustes reales · al final",
+    "from": "desde",
+    "to": "hoy"
+  }
+}

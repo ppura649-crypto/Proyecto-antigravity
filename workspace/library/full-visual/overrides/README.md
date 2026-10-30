@@ -1,0 +1,1 @@
+- `timeline.ts`, `align.py`, `voice.py`, `tighten.py`: Normalize Spanish UTF-8 accents (`NFD`/`NFKD`) for word cues and caption matching, use Spanish tail verification (`lang: "es"`), and ensure `eleven_v3` `--keep` scene pauses always insert clean silence even across fast `< 0.12 s` word gaps.

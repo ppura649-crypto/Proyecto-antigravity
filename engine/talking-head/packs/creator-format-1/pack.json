@@ -1,0 +1,17 @@
+{
+ "name": "creator-format-1",
+ "who": "the creator's own reels (@creator), the Creator Format 1 editing grammar in our colours",
+ "format": "formats/creator-format-1.json",
+ "style": "creator-format-1",
+ "overlay": "creator-format-1",
+ "hookGrammar": "formats/creator-format-1-hook.md",
+ "systemGrammar": "formats/creator-format-1-system.md",
+ "visualGrammar": "formats/creator-format-1-visuals.md",
+ "cardLanguage": "square cards; black #08080a plate for dense diagrams with white content and terracotta only on the payload; light #FEFEFE card for real artifacts; frameless floats for marks and standalone explainers; no borders, no radius, no gradients",
+ "families": "library/README.md (every kind) + remotion/src/cards/",
+ "sfx": "packs/creator-format-1/sfx.md (the closed palette, by moment)",
+ "pacing": "d-hard",
+ "reference": "assets/reference/videos/skills-rules.mp4 (reference edit A, look) + projects/edit-b (method)",
+ "hookTemplate": "packs/creator-format-1/hook.template.json",
+ "preferences": "packs/creator-format-1/preferences.md (what the creator likes, high level; read before the plan)"
+}

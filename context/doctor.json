@@ -1,0 +1,207 @@
+{
+  "at": "2026-10-29T18:56:38.739Z",
+  "checks": [
+    {
+      "name": "node",
+      "status": "ok",
+      "detail": "Node 22.17.0",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "packages",
+      "status": "ok",
+      "detail": "packages installed",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "editor",
+      "status": "ok",
+      "detail": "video editor ready (2 formats)",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "ffmpeg",
+      "status": "ok",
+      "detail": "ffmpeg and ffprobe run (the full build installed with the packages)",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "browser",
+      "status": "ok",
+      "detail": "render browser present",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "transcription",
+      "status": "warn",
+      "detail": "speech model and engine are not here yet",
+      "fix": "only formats with speech need it, and it installs itself the first time one runs",
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "python",
+      "status": "ok",
+      "detail": "Python runner present",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "disk",
+      "status": "ok",
+      "detail": "31 GB free",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "packs",
+      "status": "ok",
+      "detail": "full-visual 0.1.1, talking-head 0.6.0, split-explainer 0.2.0",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "full-visual, ffmpeg",
+      "status": "ok",
+      "detail": "ffmpeg ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "full-visual, ffprobe",
+      "status": "ok",
+      "detail": "ffprobe ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "talking-head, ffmpeg",
+      "status": "ok",
+      "detail": "ffmpeg ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "talking-head, ffprobe",
+      "status": "ok",
+      "detail": "ffprobe ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "talking-head, auto-editor",
+      "status": "ok",
+      "detail": "auto-editor ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "talking-head, python3",
+      "status": "ok",
+      "detail": "python3 ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "talking-head, python packages",
+      "status": "ok",
+      "detail": "python packages ready",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "you",
+      "status": "ok",
+      "detail": "nothing yet, which is right on day one",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "you, full-visual",
+      "status": "ok",
+      "detail": "nothing yet, which is right on day one",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "you, talking-head",
+      "status": "ok",
+      "detail": "nothing yet, which is right on day one",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "you, split-explainer",
+      "status": "ok",
+      "detail": "nothing yet, which is right on day one",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "commands",
+      "status": "ok",
+      "detail": "16 skills and agent entry points checked",
+      "fix": null,
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "keys",
+      "status": "fix",
+      "detail": "missing: COMPOSIO_API_KEY",
+      "fix": "paste it on the keys page; nothing else can supply it. New to Composio: .agents/skills/start/references/access.md",
+      "who": "you",
+      "cmd": "node scripts/keys/server.mjs"
+    },
+    {
+      "name": "connection",
+      "status": "warn",
+      "detail": "no account access yet",
+      "fix": "One key on the keys page, then a link to approve in your browser",
+      "who": "you",
+      "cmd": null
+    },
+    {
+      "name": "start",
+      "status": "warn",
+      "detail": "start has not finished",
+      "fix": "Say: set me up",
+      "who": "agent",
+      "cmd": null
+    },
+    {
+      "name": "posts",
+      "status": "warn",
+      "detail": "no posts pulled yet",
+      "fix": "Runs during start",
+      "who": "agent",
+      "cmd": null
+    }
+  ],
+  "blocking": false,
+  "version": "0.2.11"
+}

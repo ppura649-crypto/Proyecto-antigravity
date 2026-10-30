@@ -1,0 +1,2305 @@
+{
+ "duration": 77.149,
+ "silences": [
+  [
+   0.0,
+   0.14
+  ],
+  [
+   3.28,
+   3.74
+  ],
+  [
+   5.82,
+   6.55
+  ],
+  [
+   7.58,
+   7.83
+  ],
+  [
+   8.65,
+   8.77
+  ],
+  [
+   10.58,
+   10.7
+  ],
+  [
+   15.99,
+   16.33
+  ],
+  [
+   20.19,
+   20.44
+  ],
+  [
+   25.1,
+   25.26
+  ],
+  [
+   27.19,
+   27.32
+  ],
+  [
+   31.34,
+   31.59
+  ],
+  [
+   36.17,
+   36.29
+  ],
+  [
+   38.35,
+   38.57
+  ],
+  [
+   41.59,
+   41.74
+  ],
+  [
+   44.11,
+   44.36
+  ],
+  [
+   46.32,
+   46.45
+  ],
+  [
+   48.72,
+   48.88
+  ],
+  [
+   50.08,
+   50.21
+  ],
+  [
+   51.74,
+   51.88
+  ],
+  [
+   56.82,
+   57.11
+  ],
+  [
+   61.66,
+   61.8
+  ],
+  [
+   63.68,
+   63.8
+  ],
+  [
+   67.89,
+   68.14
+  ],
+  [
+   69.45,
+   69.58
+  ],
+  [
+   71.84,
+   72.09
+  ],
+  [
+   74.44,
+   74.59
+  ],
+  [
+   75.63,
+   75.76
+  ],
+  [
+   76.45,
+   77.14
+  ]
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "ground": "dark",
+   "firstWord": 0
+  },
+  {
+   "id": "origin",
+   "ground": "dark",
+   "firstWord": 18
+  },
+  {
+   "id": "angle",
+   "ground": "light",
+   "firstWord": 55
+  },
+  {
+   "id": "dust",
+   "ground": "light",
+   "firstWord": 86
+  },
+  {
+   "id": "blackout",
+   "ground": "dark",
+   "firstWord": 126
+  },
+  {
+   "id": "spring",
+   "ground": "light",
+   "firstWord": 161
+  },
+  {
+   "id": "turn",
+   "ground": "dark",
+   "firstWord": 194
+  },
+  {
+   "id": "cta",
+   "ground": "light",
+   "firstWord": 206
+  }
+ ],
+ "blocks": [
+  {
+   "words": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "slot": "top",
+   "scene": 0
+  },
+  {
+   "words": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "slot": "top",
+   "scene": 0
+  },
+  {
+   "words": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "slot": "top",
+   "scene": 0
+  },
+  {
+   "words": [
+    13,
+    14
+   ],
+   "slot": "top",
+   "scene": 0
+  },
+  {
+   "words": [
+    15,
+    16,
+    17
+   ],
+   "slot": "top",
+   "scene": 0
+  },
+  {
+   "words": [
+    18,
+    19
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    20,
+    21,
+    22,
+    23,
+    24
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    25,
+    26,
+    27
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    28,
+    29,
+    30
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    31,
+    32,
+    33,
+    34
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    35,
+    36,
+    37,
+    38
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    39,
+    40,
+    41,
+    42
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    43,
+    44,
+    45
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    46,
+    47,
+    48,
+    49,
+    50
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    51,
+    52,
+    53,
+    54
+   ],
+   "slot": "top",
+   "scene": 1
+  },
+  {
+   "words": [
+    55,
+    56,
+    57,
+    58
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    59,
+    60,
+    61
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    62,
+    63,
+    64,
+    65
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    66,
+    67,
+    68
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    69,
+    70,
+    71
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    72,
+    73,
+    74
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    75,
+    76
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    77,
+    78,
+    79
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    80,
+    81,
+    82
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    83,
+    84,
+    85
+   ],
+   "slot": "top",
+   "scene": 2
+  },
+  {
+   "words": [
+    86,
+    87,
+    88,
+    89
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    90,
+    91
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    92,
+    93,
+    94,
+    95
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    96,
+    97,
+    98
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    99,
+    100,
+    101
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    102,
+    103,
+    104,
+    105
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    106,
+    107,
+    108
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    109,
+    110,
+    111,
+    112
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    113,
+    114,
+    115
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    116,
+    117,
+    118
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    119,
+    120,
+    121
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    122,
+    123,
+    124,
+    125
+   ],
+   "slot": "top",
+   "scene": 3
+  },
+  {
+   "words": [
+    126,
+    127,
+    128,
+    129
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    130,
+    131,
+    132,
+    133
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    134,
+    135,
+    136,
+    137,
+    138
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    139,
+    140,
+    141,
+    142
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    143,
+    144
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    145,
+    146,
+    147
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    148,
+    149,
+    150,
+    151
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    152,
+    153,
+    154
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    155,
+    156,
+    157
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    158,
+    159,
+    160
+   ],
+   "slot": "top",
+   "scene": 4
+  },
+  {
+   "words": [
+    161,
+    162,
+    163,
+    164
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    165,
+    166,
+    167,
+    168
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    169,
+    170,
+    171
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    172,
+    173,
+    174
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    175,
+    176
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    177,
+    178,
+    179
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    180,
+    181
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    182,
+    183,
+    184
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    185,
+    186,
+    187
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    188,
+    189,
+    190,
+    191,
+    192
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    193
+   ],
+   "slot": "top",
+   "scene": 5
+  },
+  {
+   "words": [
+    194,
+    195,
+    196,
+    197,
+    198
+   ],
+   "slot": "top",
+   "scene": 6
+  },
+  {
+   "words": [
+    199,
+    200,
+    201,
+    202,
+    203
+   ],
+   "slot": "top",
+   "scene": 6
+  },
+  {
+   "words": [
+    204,
+    205
+   ],
+   "slot": "top",
+   "scene": 6
+  },
+  {
+   "words": [
+    206,
+    207,
+    208,
+    209,
+    210
+   ],
+   "slot": "top",
+   "scene": 7
+  },
+  {
+   "words": [
+    211,
+    212
+   ],
+   "slot": "top",
+   "scene": 7
+  },
+  {
+   "words": [
+    213,
+    214
+   ],
+   "slot": "top",
+   "scene": 7
+  },
+  {
+   "words": [
+    215,
+    216,
+    217,
+    218
+   ],
+   "slot": "top",
+   "scene": 7
+  }
+ ],
+ "words": [
+  {
+   "w": "La",
+   "key": false,
+   "emoji": null,
+   "t": 0.2,
+   "e": 0.26
+  },
+  {
+   "w": "explosión",
+   "key": true,
+   "emoji": "☄️",
+   "t": 0.3,
+   "e": 0.84
+  },
+  {
+   "w": "del",
+   "key": false,
+   "emoji": null,
+   "t": 0.88,
+   "e": 0.98
+  },
+  {
+   "w": "asteroide",
+   "key": false,
+   "emoji": null,
+   "t": 1.02,
+   "e": 1.58
+  },
+  {
+   "w": "no",
+   "key": false,
+   "emoji": null,
+   "t": 1.82,
+   "e": 1.92
+  },
+  {
+   "w": "mató",
+   "key": true,
+   "emoji": null,
+   "t": 2.0,
+   "e": 2.26
+  },
+  {
+   "w": "a",
+   "key": false,
+   "emoji": null,
+   "t": 2.3,
+   "e": 2.32
+  },
+  {
+   "w": "los",
+   "key": false,
+   "emoji": null,
+   "t": 2.38,
+   "e": 2.46
+  },
+  {
+   "w": "dinosaurios,",
+   "key": false,
+   "emoji": null,
+   "t": 2.5,
+   "e": 3.18
+  },
+  {
+   "w": "2",
+   "key": true,
+   "emoji": null,
+   "t": 3.98,
+   "e": 4.059
+  },
+  {
+   "w": "años",
+   "key": false,
+   "emoji": null,
+   "t": 4.16,
+   "e": 4.42
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 4.46,
+   "e": 4.5
+  },
+  {
+   "w": "oscuridad",
+   "key": false,
+   "emoji": null,
+   "t": 4.54,
+   "e": 4.98
+  },
+  {
+   "w": "total",
+   "key": false,
+   "emoji": null,
+   "t": 5.04,
+   "e": 5.36
+  },
+  {
+   "w": "sí,",
+   "key": true,
+   "emoji": null,
+   "t": 5.6,
+   "e": 5.78
+  },
+  {
+   "w": "mira",
+   "key": false,
+   "emoji": null,
+   "t": 6.62,
+   "e": 6.82
+  },
+  {
+   "w": "cómo",
+   "key": false,
+   "emoji": null,
+   "t": 6.94,
+   "e": 7.1
+  },
+  {
+   "w": "ocurrió.",
+   "key": true,
+   "emoji": null,
+   "t": 7.14,
+   "e": 7.56
+  },
+  {
+   "w": "Imagina",
+   "key": false,
+   "emoji": null,
+   "t": 7.86,
+   "e": 8.28
+  },
+  {
+   "w": "esto:",
+   "key": true,
+   "emoji": null,
+   "t": 8.32,
+   "e": 8.56
+  },
+  {
+   "w": "hace",
+   "key": false,
+   "emoji": null,
+   "t": 8.78,
+   "e": 9.0
+  },
+  {
+   "w": "66",
+   "key": true,
+   "emoji": null,
+   "t": 9.24,
+   "e": 9.74
+  },
+  {
+   "w": "millones",
+   "key": false,
+   "emoji": null,
+   "t": 9.76,
+   "e": 10.1
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 10.14,
+   "e": 10.2
+  },
+  {
+   "w": "años,",
+   "key": false,
+   "emoji": null,
+   "t": 10.26,
+   "e": 10.56
+  },
+  {
+   "w": "una",
+   "key": false,
+   "emoji": null,
+   "t": 10.76,
+   "e": 10.9
+  },
+  {
+   "w": "roca",
+   "key": false,
+   "emoji": null,
+   "t": 10.96,
+   "e": 11.16
+  },
+  {
+   "w": "negra",
+   "key": true,
+   "emoji": null,
+   "t": 11.24,
+   "e": 11.5
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 11.58,
+   "e": 11.64
+  },
+  {
+   "w": "12",
+   "key": true,
+   "emoji": null,
+   "t": 11.7,
+   "e": 11.98
+  },
+  {
+   "w": "kilómetros",
+   "key": false,
+   "emoji": null,
+   "t": 12.0,
+   "e": 12.5
+  },
+  {
+   "w": "cayó",
+   "key": false,
+   "emoji": null,
+   "t": 12.56,
+   "e": 12.78
+  },
+  {
+   "w": "sobre",
+   "key": false,
+   "emoji": null,
+   "t": 12.86,
+   "e": 13.06
+  },
+  {
+   "w": "la",
+   "key": false,
+   "emoji": null,
+   "t": 13.1,
+   "e": 13.16
+  },
+  {
+   "w": "costa",
+   "key": true,
+   "emoji": null,
+   "t": 13.24,
+   "e": 13.52
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 13.54,
+   "e": 13.6
+  },
+  {
+   "w": "Yucatán",
+   "key": true,
+   "emoji": null,
+   "t": 13.66,
+   "e": 14.06
+  },
+  {
+   "w": "en",
+   "key": false,
+   "emoji": null,
+   "t": 14.1,
+   "e": 14.2
+  },
+  {
+   "w": "México.",
+   "key": false,
+   "emoji": null,
+   "t": 14.22,
+   "e": 14.62
+  },
+  {
+   "w": "En",
+   "key": false,
+   "emoji": null,
+   "t": 14.84,
+   "e": 14.94
+  },
+  {
+   "w": "2024,",
+   "key": true,
+   "emoji": null,
+   "t": 15.1,
+   "e": 15.9
+  },
+  {
+   "w": "el",
+   "key": false,
+   "emoji": null,
+   "t": 16.379,
+   "e": 16.44
+  },
+  {
+   "w": "rutenio",
+   "key": false,
+   "emoji": null,
+   "t": 16.5,
+   "e": 16.86
+  },
+  {
+   "w": "del",
+   "key": false,
+   "emoji": null,
+   "t": 16.9,
+   "e": 17.0
+  },
+  {
+   "w": "cráter",
+   "key": true,
+   "emoji": null,
+   "t": 17.06,
+   "e": 17.38
+  },
+  {
+   "w": "probó",
+   "key": false,
+   "emoji": null,
+   "t": 17.48,
+   "e": 17.72
+  },
+  {
+   "w": "que",
+   "key": false,
+   "emoji": null,
+   "t": 17.82,
+   "e": 17.9
+  },
+  {
+   "w": "esa",
+   "key": false,
+   "emoji": null,
+   "t": 17.94,
+   "e": 18.16
+  },
+  {
+   "w": "roca",
+   "key": true,
+   "emoji": null,
+   "t": 18.2,
+   "e": 18.44
+  },
+  {
+   "w": "vino",
+   "key": false,
+   "emoji": null,
+   "t": 18.52,
+   "e": 18.74
+  },
+  {
+   "w": "desde",
+   "key": false,
+   "emoji": null,
+   "t": 18.8,
+   "e": 19.04
+  },
+  {
+   "w": "más",
+   "key": false,
+   "emoji": null,
+   "t": 19.16,
+   "e": 19.34
+  },
+  {
+   "w": "allá",
+   "key": false,
+   "emoji": null,
+   "t": 19.38,
+   "e": 19.56
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 19.6,
+   "e": 19.68
+  },
+  {
+   "w": "Júpiter.",
+   "key": true,
+   "emoji": "🪐",
+   "t": 19.72,
+   "e": 20.16
+  },
+  {
+   "w": "Al",
+   "key": false,
+   "emoji": null,
+   "t": 20.46,
+   "e": 20.52
+  },
+  {
+   "w": "chocar,",
+   "key": true,
+   "emoji": null,
+   "t": 20.58,
+   "e": 20.9
+  },
+  {
+   "w": "simulaciones",
+   "key": false,
+   "emoji": null,
+   "t": 21.12,
+   "e": 21.74
+  },
+  {
+   "w": "3D",
+   "key": false,
+   "emoji": null,
+   "t": 21.88,
+   "e": 22.28
+  },
+  {
+   "w": "mostraron",
+   "key": false,
+   "emoji": null,
+   "t": 22.32,
+   "e": 22.72
+  },
+  {
+   "w": "que",
+   "key": false,
+   "emoji": null,
+   "t": 22.8,
+   "e": 22.84
+  },
+  {
+   "w": "entró",
+   "key": true,
+   "emoji": null,
+   "t": 22.86,
+   "e": 23.06
+  },
+  {
+   "w": "en",
+   "key": false,
+   "emoji": null,
+   "t": 23.08,
+   "e": 23.14
+  },
+  {
+   "w": "un",
+   "key": false,
+   "emoji": null,
+   "t": 23.18,
+   "e": 23.26
+  },
+  {
+   "w": "ángulo",
+   "key": true,
+   "emoji": null,
+   "t": 23.3,
+   "e": 23.54
+  },
+  {
+   "w": "inclinado",
+   "key": false,
+   "emoji": null,
+   "t": 23.58,
+   "e": 24.06
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 24.12,
+   "e": 24.22
+  },
+  {
+   "w": "60",
+   "key": true,
+   "emoji": null,
+   "t": 24.46,
+   "e": 24.66
+  },
+  {
+   "w": "grados.",
+   "key": false,
+   "emoji": null,
+   "t": 24.7,
+   "e": 25.08
+  },
+  {
+   "w": "Fue",
+   "key": false,
+   "emoji": null,
+   "t": 25.28,
+   "e": 25.36
+  },
+  {
+   "w": "la",
+   "key": false,
+   "emoji": null,
+   "t": 25.4,
+   "e": 25.44
+  },
+  {
+   "w": "trayectoria",
+   "key": true,
+   "emoji": null,
+   "t": 25.5,
+   "e": 25.98
+  },
+  {
+   "w": "más",
+   "key": false,
+   "emoji": null,
+   "t": 26.1,
+   "e": 26.3
+  },
+  {
+   "w": "letal",
+   "key": true,
+   "emoji": null,
+   "t": 26.34,
+   "e": 26.62
+  },
+  {
+   "w": "posible,",
+   "key": false,
+   "emoji": null,
+   "t": 26.7,
+   "e": 27.14
+  },
+  {
+   "w": "disparando",
+   "key": false,
+   "emoji": null,
+   "t": 27.34,
+   "e": 27.78
+  },
+  {
+   "w": "toneladas",
+   "key": true,
+   "emoji": null,
+   "t": 27.86,
+   "e": 28.3
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 28.32,
+   "e": 28.36
+  },
+  {
+   "w": "azufre",
+   "key": true,
+   "emoji": null,
+   "t": 28.4,
+   "e": 28.74
+  },
+  {
+   "w": "hirviendo",
+   "key": false,
+   "emoji": null,
+   "t": 28.76,
+   "e": 29.34
+  },
+  {
+   "w": "y",
+   "key": false,
+   "emoji": null,
+   "t": 29.38,
+   "e": 29.42
+  },
+  {
+   "w": "roca",
+   "key": false,
+   "emoji": null,
+   "t": 29.52,
+   "e": 29.72
+  },
+  {
+   "w": "pulverizada",
+   "key": true,
+   "emoji": null,
+   "t": 29.8,
+   "e": 30.4
+  },
+  {
+   "w": "directo",
+   "key": false,
+   "emoji": null,
+   "t": 30.48,
+   "e": 30.82
+  },
+  {
+   "w": "al",
+   "key": false,
+   "emoji": null,
+   "t": 30.86,
+   "e": 30.92
+  },
+  {
+   "w": "cielo.",
+   "key": true,
+   "emoji": null,
+   "t": 31.0,
+   "e": 31.3
+  },
+  {
+   "w": "Esa",
+   "key": false,
+   "emoji": null,
+   "t": 31.62,
+   "e": 31.8
+  },
+  {
+   "w": "roca",
+   "key": true,
+   "emoji": null,
+   "t": 31.88,
+   "e": 32.1
+  },
+  {
+   "w": "se",
+   "key": false,
+   "emoji": null,
+   "t": 32.18,
+   "e": 32.28
+  },
+  {
+   "w": "volvió",
+   "key": false,
+   "emoji": null,
+   "t": 32.299,
+   "e": 32.64
+  },
+  {
+   "w": "polvo",
+   "key": false,
+   "emoji": null,
+   "t": 32.659,
+   "e": 32.9
+  },
+  {
+   "w": "microscópico",
+   "key": true,
+   "emoji": null,
+   "t": 32.98,
+   "e": 33.66
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 33.68,
+   "e": 33.74
+  },
+  {
+   "w": "silicato,",
+   "key": true,
+   "emoji": null,
+   "t": 33.8,
+   "e": 34.34
+  },
+  {
+   "w": "más",
+   "key": false,
+   "emoji": null,
+   "t": 34.56,
+   "e": 34.74
+  },
+  {
+   "w": "fino",
+   "key": false,
+   "emoji": null,
+   "t": 34.78,
+   "e": 34.96
+  },
+  {
+   "w": "que",
+   "key": false,
+   "emoji": null,
+   "t": 35.04,
+   "e": 35.1
+  },
+  {
+   "w": "el",
+   "key": false,
+   "emoji": null,
+   "t": 35.12,
+   "e": 35.2
+  },
+  {
+   "w": "humo",
+   "key": true,
+   "emoji": "💨",
+   "t": 35.22,
+   "e": 35.4
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 35.42,
+   "e": 35.48
+  },
+  {
+   "w": "tu",
+   "key": false,
+   "emoji": null,
+   "t": 35.54,
+   "e": 35.6
+  },
+  {
+   "w": "cocina.",
+   "key": true,
+   "emoji": null,
+   "t": 35.66,
+   "e": 36.12
+  },
+  {
+   "w": "Un",
+   "key": false,
+   "emoji": null,
+   "t": 36.34,
+   "e": 36.4
+  },
+  {
+   "w": "estudio",
+   "key": false,
+   "emoji": null,
+   "t": 36.44,
+   "e": 36.78
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 36.82,
+   "e": 36.86
+  },
+  {
+   "w": "Nature",
+   "key": true,
+   "emoji": null,
+   "t": 36.92,
+   "e": 37.36
+  },
+  {
+   "w": "en",
+   "key": false,
+   "emoji": null,
+   "t": 37.38,
+   "e": 37.46
+  },
+  {
+   "w": "2023",
+   "key": true,
+   "emoji": null,
+   "t": 37.62,
+   "e": 38.32
+  },
+  {
+   "w": "reveló",
+   "key": false,
+   "emoji": null,
+   "t": 38.7,
+   "e": 38.94
+  },
+  {
+   "w": "que",
+   "key": false,
+   "emoji": null,
+   "t": 39.02,
+   "e": 39.06
+  },
+  {
+   "w": "ese",
+   "key": false,
+   "emoji": null,
+   "t": 39.1,
+   "e": 39.26
+  },
+  {
+   "w": "manto",
+   "key": true,
+   "emoji": null,
+   "t": 39.3,
+   "e": 39.52
+  },
+  {
+   "w": "negro",
+   "key": false,
+   "emoji": null,
+   "t": 39.6,
+   "e": 39.84
+  },
+  {
+   "w": "bloqueó",
+   "key": false,
+   "emoji": null,
+   "t": 39.92,
+   "e": 40.22
+  },
+  {
+   "w": "el",
+   "key": false,
+   "emoji": null,
+   "t": 40.24,
+   "e": 40.3
+  },
+  {
+   "w": "cielo",
+   "key": true,
+   "emoji": null,
+   "t": 40.38,
+   "e": 40.66
+  },
+  {
+   "w": "por",
+   "key": false,
+   "emoji": null,
+   "t": 40.68,
+   "e": 40.78
+  },
+  {
+   "w": "15",
+   "key": true,
+   "emoji": null,
+   "t": 40.86,
+   "e": 41.16
+  },
+  {
+   "w": "años,",
+   "key": false,
+   "emoji": null,
+   "t": 41.24,
+   "e": 41.54
+  },
+  {
+   "w": "congelando",
+   "key": false,
+   "emoji": null,
+   "t": 41.74,
+   "e": 42.2
+  },
+  {
+   "w": "la",
+   "key": false,
+   "emoji": null,
+   "t": 42.24,
+   "e": 42.3
+  },
+  {
+   "w": "Tierra",
+   "key": true,
+   "emoji": null,
+   "t": 42.36,
+   "e": 42.66
+  },
+  {
+   "w": "hasta",
+   "key": false,
+   "emoji": null,
+   "t": 42.68,
+   "e": 42.96
+  },
+  {
+   "w": "15",
+   "key": true,
+   "emoji": null,
+   "t": 42.98,
+   "e": 43.28
+  },
+  {
+   "w": "grados",
+   "key": false,
+   "emoji": null,
+   "t": 43.3,
+   "e": 43.6
+  },
+  {
+   "w": "Celsius.",
+   "key": false,
+   "emoji": null,
+   "t": 43.62,
+   "e": 44.08
+  },
+  {
+   "w": "Ahí",
+   "key": false,
+   "emoji": null,
+   "t": 44.4,
+   "e": 44.58
+  },
+  {
+   "w": "empezó",
+   "key": false,
+   "emoji": null,
+   "t": 44.64,
+   "e": 44.96
+  },
+  {
+   "w": "la",
+   "key": false,
+   "emoji": null,
+   "t": 44.98,
+   "e": 45.04
+  },
+  {
+   "w": "pesadilla:",
+   "key": true,
+   "emoji": null,
+   "t": 45.12,
+   "e": 45.6
+  },
+  {
+   "w": "sin",
+   "key": false,
+   "emoji": null,
+   "t": 45.8,
+   "e": 45.94
+  },
+  {
+   "w": "luz,",
+   "key": false,
+   "emoji": null,
+   "t": 46.0,
+   "e": 46.28
+  },
+  {
+   "w": "la",
+   "key": false,
+   "emoji": null,
+   "t": 46.48,
+   "e": 46.52
+  },
+  {
+   "w": "fotosíntesis",
+   "key": true,
+   "emoji": "🌱",
+   "t": 46.6,
+   "e": 47.26
+  },
+  {
+   "w": "murió",
+   "key": false,
+   "emoji": null,
+   "t": 47.34,
+   "e": 47.62
+  },
+  {
+   "w": "por",
+   "key": false,
+   "emoji": null,
+   "t": 47.64,
+   "e": 47.78
+  },
+  {
+   "w": "casi",
+   "key": false,
+   "emoji": null,
+   "t": 47.82,
+   "e": 48.06
+  },
+  {
+   "w": "2",
+   "key": true,
+   "emoji": null,
+   "t": 48.26,
+   "e": 48.28
+  },
+  {
+   "w": "años.",
+   "key": false,
+   "emoji": null,
+   "t": 48.38,
+   "e": 48.7
+  },
+  {
+   "w": "Los",
+   "key": false,
+   "emoji": null,
+   "t": 48.9,
+   "e": 49.02
+  },
+  {
+   "w": "bosques",
+   "key": true,
+   "emoji": null,
+   "t": 49.08,
+   "e": 49.4
+  },
+  {
+   "w": "se",
+   "key": false,
+   "emoji": null,
+   "t": 49.42,
+   "e": 49.48
+  },
+  {
+   "w": "secaron,",
+   "key": false,
+   "emoji": null,
+   "t": 49.54,
+   "e": 50.02
+  },
+  {
+   "w": "los",
+   "key": false,
+   "emoji": null,
+   "t": 50.22,
+   "e": 50.34
+  },
+  {
+   "w": "herbívoros",
+   "key": true,
+   "emoji": null,
+   "t": 50.36,
+   "e": 50.84
+  },
+  {
+   "w": "murieron",
+   "key": false,
+   "emoji": null,
+   "t": 50.94,
+   "e": 51.28
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 51.32,
+   "e": 51.38
+  },
+  {
+   "w": "hambre",
+   "key": true,
+   "emoji": null,
+   "t": 51.44,
+   "e": 51.7
+  },
+  {
+   "w": "y",
+   "key": false,
+   "emoji": null,
+   "t": 51.9,
+   "e": 51.94
+  },
+  {
+   "w": "la",
+   "key": false,
+   "emoji": null,
+   "t": 52.0,
+   "e": 52.04
+  },
+  {
+   "w": "cadena",
+   "key": true,
+   "emoji": null,
+   "t": 52.12,
+   "e": 52.42
+  },
+  {
+   "w": "alimenticia",
+   "key": false,
+   "emoji": null,
+   "t": 52.44,
+   "e": 53.02
+  },
+  {
+   "w": "colapsó",
+   "key": false,
+   "emoji": null,
+   "t": 53.1,
+   "e": 53.46
+  },
+  {
+   "w": "desde",
+   "key": false,
+   "emoji": null,
+   "t": 53.5,
+   "e": 53.7
+  },
+  {
+   "w": "abajo,",
+   "key": true,
+   "emoji": null,
+   "t": 53.74,
+   "e": 54.06
+  },
+  {
+   "w": "borrando",
+   "key": false,
+   "emoji": null,
+   "t": 54.28,
+   "e": 54.6
+  },
+  {
+   "w": "al",
+   "key": false,
+   "emoji": null,
+   "t": 54.62,
+   "e": 54.72
+  },
+  {
+   "w": "75%",
+   "key": true,
+   "emoji": null,
+   "t": 54.92,
+   "e": 55.98
+  },
+  {
+   "w": "de",
+   "key": false,
+   "emoji": null,
+   "t": 56.02,
+   "e": 56.06
+  },
+  {
+   "w": "las",
+   "key": false,
+   "emoji": null,
+   "t": 56.1,
+   "e": 56.2
+  },
+  {
+   "w": "especies.",
+   "key": true,
+   "emoji": null,
+   "t": 56.26,
+   "e": 56.8
+  },
+  {
+   "w": "Peces",
+   "key": false,
+   "emoji": null,
+   "t": 57.12,
+   "e": 57.36
+  },
+  {
+   "w": "fósiles",
+   "key": true,
+   "emoji": "🐟",
+   "t": 57.44,
+   "e": 57.84
+  },
+  {
+   "w": "con",
+   "key": false,
+   "emoji": null,
+   "t": 57.86,
+   "e": 57.98
+  },
+  {
+   "w": "vidrio",
+   "key": false,
+   "emoji": null,
+   "t": 58.0,
+   "e": 58.28
+  },
+  {
+   "w": "fundido",
+   "key": false,
+   "emoji": null,
+   "t": 58.32,
+   "e": 58.64
+  },
+  {
+   "w": "en",
+   "key": false,
+   "emoji": null,
+   "t": 58.66,
+   "e": 58.72
+  },
+  {
+   "w": "sus",
+   "key": false,
+   "emoji": null,
+   "t": 58.78,
+   "e": 58.92
+  },
+  {
+   "w": "branquias",
+   "key": true,
+   "emoji": null,
+   "t": 58.94,
+   "e": 59.36
+  },
+  {
+   "w": "probaron",
+   "key": false,
+   "emoji": null,
+   "t": 59.46,
+   "e": 59.8
+  },
+  {
+   "w": "que",
+   "key": false,
+   "emoji": null,
+   "t": 59.82,
+   "e": 59.92
+  },
+  {
+   "w": "golpeó",
+   "key": true,
+   "emoji": null,
+   "t": 59.94,
+   "e": 60.24
+  },
+  {
+   "w": "en",
+   "key": false,
+   "emoji": null,
+   "t": 60.28,
+   "e": 60.38
+  },
+  {
+   "w": "plena",
+   "key": false,
+   "emoji": null,
+   "t": 60.4,
+   "e": 60.66
+  },
+  {
+   "w": "primavera",
+   "key": true,
+   "emoji": null,
+   "t": 60.68,
+   "e": 61.08
+  },
+  {
+   "w": "del",
+   "key": false,
+   "emoji": null,
+   "t": 61.12,
+   "e": 61.24
+  },
+  {
+   "w": "norte.",
+   "key": true,
+   "emoji": null,
+   "t": 61.28,
+   "e": 61.62
+  },
+  {
+   "w": "Los",
+   "key": false,
+   "emoji": null,
+   "t": 61.84,
+   "e": 61.94
+  },
+  {
+   "w": "dinosaurios",
+   "key": true,
+   "emoji": null,
+   "t": 61.96,
+   "e": 62.48
+  },
+  {
+   "w": "quedaron",
+   "key": false,
+   "emoji": null,
+   "t": 62.5,
+   "e": 62.78
+  },
+  {
+   "w": "expuestos",
+   "key": false,
+   "emoji": null,
+   "t": 62.82,
+   "e": 63.26
+  },
+  {
+   "w": "afuera,",
+   "key": true,
+   "emoji": null,
+   "t": 63.32,
+   "e": 63.62
+  },
+  {
+   "w": "mientras",
+   "key": false,
+   "emoji": null,
+   "t": 63.82,
+   "e": 64.16
+  },
+  {
+   "w": "pequeños",
+   "key": false,
+   "emoji": null,
+   "t": 64.18,
+   "e": 64.519
+  },
+  {
+   "w": "mamíferos",
+   "key": true,
+   "emoji": null,
+   "t": 64.56,
+   "e": 65.0
+  },
+  {
+   "w": "ocultos",
+   "key": false,
+   "emoji": null,
+   "t": 65.06,
+   "e": 65.44
+  },
+  {
+   "w": "en",
+   "key": false,
+   "emoji": null,
+   "t": 65.48,
+   "e": 65.56
+  },
+  {
+   "w": "madrigueras",
+   "key": true,
+   "emoji": null,
+   "t": 65.58,
+   "e": 66.08
+  },
+  {
+   "w": "bajo",
+   "key": false,
+   "emoji": null,
+   "t": 66.12,
+   "e": 66.28
+  },
+  {
+   "w": "el",
+   "key": false,
+   "emoji": null,
+   "t": 66.3,
+   "e": 66.36
+  },
+  {
+   "w": "otoño",
+   "key": true,
+   "emoji": null,
+   "t": 66.4,
+   "e": 66.68
+  },
+  {
+   "w": "del",
+   "key": false,
+   "emoji": null,
+   "t": 66.72,
+   "e": 66.8
+  },
+  {
+   "w": "sur",
+   "key": false,
+   "emoji": null,
+   "t": 66.9,
+   "e": 67.06
+  },
+  {
+   "w": "sobrevivieron.",
+   "key": true,
+   "emoji": null,
+   "t": 67.16,
+   "e": 67.84
+  },
+  {
+   "w": "No",
+   "key": false,
+   "emoji": null,
+   "t": 68.16,
+   "e": 68.28
+  },
+  {
+   "w": "fue",
+   "key": false,
+   "emoji": null,
+   "t": 68.32,
+   "e": 68.44
+  },
+  {
+   "w": "una",
+   "key": false,
+   "emoji": null,
+   "t": 68.48,
+   "e": 68.6
+  },
+  {
+   "w": "sola",
+   "key": false,
+   "emoji": null,
+   "t": 68.68,
+   "e": 68.82
+  },
+  {
+   "w": "explosión,",
+   "key": true,
+   "emoji": null,
+   "t": 68.84,
+   "e": 69.38
+  },
+  {
+   "w": "fueron",
+   "key": false,
+   "emoji": null,
+   "t": 69.6,
+   "e": 69.82
+  },
+  {
+   "w": "730",
+   "key": true,
+   "emoji": null,
+   "t": 70.08,
+   "e": 70.82
+  },
+  {
+   "w": "días",
+   "key": false,
+   "emoji": null,
+   "t": 70.86,
+   "e": 71.1
+  },
+  {
+   "w": "sin",
+   "key": false,
+   "emoji": null,
+   "t": 71.14,
+   "e": 71.26
+  },
+  {
+   "w": "ver",
+   "key": false,
+   "emoji": null,
+   "t": 71.3,
+   "e": 71.4
+  },
+  {
+   "w": "el",
+   "key": false,
+   "emoji": null,
+   "t": 71.44,
+   "e": 71.5
+  },
+  {
+   "w": "sol.",
+   "key": true,
+   "emoji": "☀️",
+   "t": 71.58,
+   "e": 71.8
+  },
+  {
+   "w": "Si",
+   "key": false,
+   "emoji": null,
+   "t": 72.1,
+   "e": 72.16
+  },
+  {
+   "w": "quieres",
+   "key": false,
+   "emoji": null,
+   "t": 72.24,
+   "e": 72.46
+  },
+  {
+   "w": "los",
+   "key": false,
+   "emoji": null,
+   "t": 72.48,
+   "e": 72.64
+  },
+  {
+   "w": "4",
+   "key": true,
+   "emoji": null,
+   "t": 72.84,
+   "e": 72.86
+  },
+  {
+   "w": "estudios",
+   "key": false,
+   "emoji": null,
+   "t": 72.88,
+   "e": 73.24
+  },
+  {
+   "w": "científicos",
+   "key": false,
+   "emoji": null,
+   "t": 73.26,
+   "e": 73.78
+  },
+  {
+   "w": "originales,",
+   "key": true,
+   "emoji": null,
+   "t": 73.82,
+   "e": 74.4
+  },
+  {
+   "w": "comenta",
+   "key": false,
+   "emoji": null,
+   "t": 74.6,
+   "e": 75.0
+  },
+  {
+   "w": "\"DINO\"",
+   "key": true,
+   "emoji": null,
+   "t": 75.22,
+   "e": 75.56
+  },
+  {
+   "w": "y",
+   "key": false,
+   "emoji": null,
+   "t": 75.78,
+   "e": 75.8
+  },
+  {
+   "w": "te",
+   "key": false,
+   "emoji": null,
+   "t": 75.88,
+   "e": 75.94
+  },
+  {
+   "w": "los",
+   "key": false,
+   "emoji": null,
+   "t": 75.96,
+   "e": 76.08
+  },
+  {
+   "w": "envío.",
+   "key": true,
+   "emoji": null,
+   "t": 76.12,
+   "e": 76.42
+  }
+ ]
+}

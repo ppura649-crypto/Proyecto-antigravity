@@ -1,0 +1,21 @@
+{
+  "voice": {
+    "id": "gWaDC0oXAheKoZfljzuI",
+    "name": "Snap",
+    "model": "eleven_v3",
+    "lang": "es",
+    "speed": 1.04,
+    "stability": 0.5,
+    "similarity": 0.8,
+    "style": 0.0
+  },
+  "theme": {
+    "motion": "measured",
+    "caption": {
+      "leadMs": 80
+    }
+  },
+  "chrome": {
+    "type": "none"
+  }
+}

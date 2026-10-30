@@ -1,0 +1,84 @@
+# Keyframes
+
+This folder makes videos on your own machine with the agent you are reading this in. Your working files and exports stay in this folder. Bring your source material and use the command for your format. Nothing is posted for you.
+
+## The three commands
+
+- `/start`: set up account-based formats, and update what the folder knows about you. It checks the machine, connects your account through a local page, and reads your posts. Your workspace shows what needs you while it reads. Talking Head and Quick Cuts can start from your footage and brief during that reading; After the short account read, continue into Trial Reels automatically if installed. If setup has run before, it says what it knows and asks what to update.
+- `/add`: run this after you download another Keyframes pack. Unzip the pack anywhere and say `/add` with the path. The pack's format, scripts and assets are merged into this folder. Nothing else changes.
+- One command per format you own: <!-- keyframes:commands -->`/full-visual`, `/talking-head` or `/split-explainer`<!-- /keyframes:commands -->. The prefix belongs to the agent, not to us: a slash in Claude Code, Grok, Cursor and Copilot CLI, a dollar in Codex, and a plain request to use the named skill in Gemini CLI or another agent. The first time a format runs it sets itself up with a few questions and shows you one example before touching your footage. After that it runs on what it knows.
+
+## Product Demo
+
+Product Demo starts from a URL, repository, app, designs or recordings. It needs no social account or fixed visual look. Its voice setup chooses a narration service once, with keys entered in the local voice form and saved directly to `.env.local`. If it is the only installed pack, start with `/product-demo` and the product brief. Run machine setup yourself; do not connect Instagram or ask for Composio. In a mixed folder, account work for other formats never blocks a product film.
+
+Its skill owns a flexible creative process. The fixed stages, source-post measurements, caption package and default proposal approvals below apply to the social formats. Product Demo follows the supplied product evidence, uses a still before video, reviews its own work by default and delivers the checked film with editable source. Keep the requested scope when the buyer asks only for a plan or revision.
+
+## The folder
+
+```
+workspace/
+  input/                      drop clips here; a subfolder per format is optional
+  projects/<date>-<format>-<slug>/   the work in progress: the brief, the settings, the renders, the checks
+  output/<date>-<format>-<slug>/     one folder per finished post: the video, the caption, the cover, a sound card when the video is silent
+  library/                    your brand, your hooks, your logos, your b-roll, each format's setup
+  board.html                  the page you open: what is ready to post, what is being made, what is needed from you
+context/                      what the folder knows about you; built by /start, refreshed when you ask
+.env.local                    your keys; written by the keys page; never shared, never committed
+```
+
+The folder name carries the format from the project on, so `output/2026-09-03-full-visual-launch/` says what it is. Input is shared because one clip can feed several formats.
+
+Your workspace is a local page served by `node scripts/workspace.mjs --ensure --no-open`. The agent runs this and shares the URL. Home shows what needs you and a new-video action for every format you have set up. Every screen has its own URL, and it reads changed files every ten seconds. Edit any Markdown file in your folder and press Save to update the real file, including preferences and account notes. Trial Reels accepts files, folders and Drive links in each discovered format. Read its saved input manifest before continuing; its input reference explains imports, verification and removed files. Setup choices and new videos use a prompt copied into chat for the agent to run. Talking Head look choices go through the `talking-head-customization` skill, which saves them with their reasons in `workspace/library/`; that format has no save script. `board.html` remains a static fallback.
+
+The first visit has a short welcome, your account details and one setup prompt. Go to Home and Do this later both remember your choice in `context/onboarding.json`; the welcome never reopens after that. Your agent reuses those account details. Account learning remains separate in `context/start.json`, with progress and remaining questions on Home while you start your formats. You can add or update account details from Account whenever you like.
+
+## What happens to your footage
+
+Every clip is copied once into a clean working version before anything else touches it. The original file is never modified. For formats that put things over a video of you, the layer is rendered on its own and laid over the untouched clip, so your face and voice never pass through a renderer.
+
+## Rules the agent follows here
+
+- Never ask for a key in chat. Open the keys page.
+- Never ask the person to run a command. You have a shell on their machine, so installing Node, ffmpeg, the packages and the page renderer is your work, and so is opening a settings pane or a sign-in window. Three things are theirs and nothing else is: typing a password into a window you opened, ticking a permission the operating system keeps out of every process's reach, and restarting an application you are not allowed to touch. `node scripts/doctor.mjs` names every step and who it belongs to; run every one that is yours rather than printing it. If you are about to print a command for them to copy, run it instead.
+- This folder was built on a Mac. On Windows or Linux a step can fail for a reason that has nothing to do with the video: a program under another name (`python` where a script calls `python3`), a path, a shell, a tool that is not there. When that happens, find out why and make it work on this machine. Change only the means, never the feature, the end goal or the quality: the same stages, the same checks, the same files, the same result. Never skip a stage, lower a check or drop a layer to get past an error. Write each thing you had to do in `context/machine.md`, one line a fix, and read that file before a video so nothing is solved twice. If a step cannot work here without lowering the result, stop and say so plainly.
+- Preferences hold what stays true of you from one video to the next, in `workspace/library/<format>.preferences.md`. A correction to one scene stays in that video. You can edit the page yourself; your edit is read before anything is saved. Talking Head learns its look once through the `talking-head-customization` skill and saves it in `workspace/library/`.
+- Markdown edits saved on the page are already in the folder, exactly as you wrote them. Read the current file before using or changing it. Keep the buyer's meaning when later learning from corrections; never replace a saved edit with an older draft.
+- Never post or send anything on your behalf. The page can remove Trial Reels inputs when you choose Remove, with Restore available; the agent respects those removals.
+- Never read another account. Only yours, through the connection you approved.
+- A still image before every video, so you see the frame before waiting on a render.
+- Nothing reaches you unchecked, the first version included. Every check runs before a version is opened on your desk and again before a post reaches output. A check that could not run counts as a failure, the reason is written down, and a failed post never leaves the workroom.
+- Captions have no hashtags and no em dashes. The value goes in the caption, not behind a link.
+- No words the buyer does not need: the agent says format, hook, reel, template, system.
+- Short and plain, everywhere you write. One sentence where two were written, and the second clause cut when the first already says it. A title is a few words, the line under it one sentence, an ask three lines at most. It should be understood at a glance, first time. This holds for every page, every reading you write down and every line you say in chat. A step that needs a paragraph to explain it is a step drawn wrong.
+- Every format runs as a fixed sequence of stages and says at the end of each what comes next, in your words, in chat and at the foot of every page. The sequence runs again for the next batch of your posts or your next clip, and each video records its own progress, so a finished video never hides another unfinished one. The workspace keeps the format header and tabs across its pages, shows unfinished work and recent outputs on Overview, and shows Talking Head steps on each video page. Trial Reels shows every discovered format as a picture row, without a format limit. Each format shows only its current job: originals, one study prompt, then the checked test. Study continues directly into testing. Approval starts three or four variations per reel, including the test; afterward the page shows only outputs grouped beside their source and local Posted checkboxes. + Trial reels accepts multiple own-account links for a new input and test request. Read the input reference for that request’s separate approval. Nothing is made before the format is studied and written down; the first version of one post is shown, its folder and its video opened, before every version is made; you say what to change or say go.
+- Anything that can be measured is measured before it is shown, and anything measured is drawn back on the frame and looked at. A version is compared with the post it came from number by number, in points of the frame, and a gap too small to name by eye is still a fail. Sizes, gaps and places are read off your own posts, never typed in by hand. When the tool that reads a frame does not recognise what it is looking at it says so and stops; it never gives a number for a frame it did not read, because a wrong number that looks right is what reaches you.
+- Anything you must see or decide has a page: the keys, the account reading, every example and ask for material. Use the workspace routes for setup and new videos. A saved Talking Head look is never asked again on a new clip: footage, transcript or agent transcription, then the prompt. Only an explicit look edit reopens those controls. List Reel follows the same setup discipline: save Hook, Overlays and CTA with `scripts/quick-cuts/scroll/save-look.mjs`, then reuse them. Its Ideas bucket and input uploads save real files; research, approvals and production go through chat. Read its progress reference and use `scripts/quick-cuts/scroll/steps.mjs` for the required evidence beneath the five visible stages. One-shot Reel reuses those Ideas and Research patterns with one continuous original clip of the buyer. Its `phone/save-look.mjs` saves the look once, and `phone/document.mjs` builds the sourced visual document as HTML and PDF. Deliver that document, a full caption and a copyable message with the checked reel; `phone/steps.mjs` keeps all of those files current. Research, creation and sending are never triggered by the page. Standalone examples still use `node scripts/page.mjs <file>`.
+- Four shelves, before any ask. What is in your posts (the frames, the cards, the lines, the sounds, the numbers) the agent takes with its scripts. What is on the internet (a logo, a page, a chart, a song's name) the agent fetches and verifies. What only you have (a raw take, a raw timelapse, a login to your own session) is the only thing ever asked, once, on a page, with a crop that shows which. What is ours to make (lines, captions, the plan) is never asked. An ask for anything on the first, second or fourth shelf is a bug. The words on screen are never asked, neither what they say nor how they look: their rows, length, case and place are read from your posts and copied exactly; only the words change. Every ask says what is already in your posts for it.
+
+## Keeping it current
+
+The workspace and format commands use the same progress readers. A preview belongs to the current project files and checks; an older render stays in previous files. Saved defaults belong to future videos, while each project keeps its applied look. If a preference file changed by hand, read it and reconcile its meaning with explicit look answers before saving. Keep that correction instead of replacing it with old settings. Batch requests keep every planned version visible before its project exists. Copying a prompt records intent, never completion. Run the needed commands, repairs and installs yourself, then show the next review.
+
+Talking Head stops where its skill says to stop: you watch the cut, approve the hook, and correct the visual plan in words. Your workspace follows the video from those approvals.
+The shared concrete visual philosophy remains for every creator; preferences primarily adapt layout, captions, typography, colors and shapes.
+
+When you open this folder, run `node hooks/session-start.mjs` unless its workspace URL is already in your session context. Share that URL first, then any line about an account reading that is behind. It reuses the running workspace and never opens, starts or stops a browser. Some agents run this hook without passing its output to you; run it again to get the URL. Always lead with Home, where the buyer can see what needs them.
+
+Every video opens in the workspace editor, where the buyer moves, trims and adds by hand; the page never renders. Its Export button leaves `edit/export-request.json` in the project and a line to paste here. Exporting an edit follows the internal `edit` skill (`node scripts/edit.mjs export <project>`), and the hook names any edit still waiting.
+
+Say "refresh" whenever you have posted since the last time. It updates 90 days of account context: captions and a few thumbnails. Trial Reels separately ranks six months, keeps the best 50 videos, and studies a few examples of each useful format. Talking heads can vary their written opening hook while keeping the edit, speech and original embedded audio. Familiar formats reuse the five-frame reading; uncertain details get closer inspection. Every Trial Reels export preserves its source audio bytes and timing. Nothing is pulled behind your back. The workspace shows progress written by the agent-run tasks. A format waits for the readings it uses; footage-led work can continue while account readings run.
+
+## When something breaks
+
+Say "doctor". It checks the machine and prints one line per problem with what to do. That output is also what to send if you ask for help.
+
+## Where things are, for the agent
+
+Treat `/talking-head`, `$talking-head` and plain "talking head" as the same request, and do the same for each installed format. Resolve the skill in `.agents/skills/<name>/SKILL.md` even when it is absent from your session's skill menu. Read its references relative to that skill directory and run its commands from the folder containing `runtime.json`. Missing skills are an installation fault: run `node scripts/agent-skills.mjs --json` and repair the files before attempting the format.
+
+## Remembering the person
+
+When they tell you something, first ask what it is about. Most feedback is about this video: fix what it names, in this project, and write nothing anywhere else. Only what would still be true on their next video belongs in their preferences: a taste, a goal, a boundary, "from now on", "I never want", or the same correction coming back on a second video. It goes in `workspace/library/<format>.preferences.md`, or in `context/preferences.md` when it holds whatever they are making. Write it as one or two sentences at a high level: what they want and why, in their words where they gave them. Rewrite the sentence it replaces. Never a log, a date or a video name. A fault in our work (a bad crop, a boring picture, a missed sync) is never their preference: fix it, do not file it under their name. Read both pages before you write anything for them. For Talking Head, the look belongs to the `talking-head-customization` skill, and nothing remembered ever changes the method or its patterns.
+
+Skills live in `.agents/skills/`; every format has one, plus `start`, `add`, and the internal `setup`, `stages`, `research` and `captions`. Scripts live in `scripts/`, one per deterministic step, each with a JSON contract in its header. Read the format skill and available context before writing. While account context is unavailable, Talking Head uses the buyer's clip and words; topic formats need an explicit topic and audience in the project brief. Never invent account knowledge or mark account setup done to bypass a gate. Every reader writes measured JSON; every reading that must be understood has Markdown beside it.

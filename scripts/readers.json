@@ -1,0 +1,190 @@
+{
+  "note": "Account context uses 90 days of captions and at most 12 thumbnails. context.mjs defaults to that cheap scope. Only an installed format can request detailed readers: Trial Reels selects the best 50 six-month videos, classifies previews first, and measures up to three references per format or one source. Cached measurements remain inputs; new captions do not trigger a scan of the account.",
+  "readers": [
+    {
+      "id": "profile",
+      "what": "your posts and your numbers",
+      "run": "profile.mjs",
+      "needs": [],
+      "writes": [
+        "context/profile.json",
+        "context/posts.json"
+      ],
+      "source": true,
+      "scopes": [
+        "account",
+        "trial-reels"
+      ]
+    },
+    {
+      "id": "structure",
+      "what": "the shape of selected references",
+      "run": "structure.mjs",
+      "needs": [
+        "profile"
+      ],
+      "per": "post",
+      "writes": [
+        "context/structure/<id>.json"
+      ],
+      "from": [
+        "context/posts/<id>.mp4",
+        "context/posts/<id>.jpg"
+      ],
+      "scopes": [
+        "trial-reels"
+      ]
+    },
+    {
+      "id": "sounds",
+      "what": "which posts share a track",
+      "run": "sounds.mjs",
+      "needs": [
+        "profile"
+      ],
+      "writes": [
+        "context/sounds.json"
+      ],
+      "from": [
+        "context/posts.json"
+      ],
+      "scopes": [
+        "trial-reels"
+      ]
+    },
+    {
+      "id": "formats",
+      "what": "your posts grouped into formats",
+      "run": "formats.mjs",
+      "needs": [
+        "structure",
+        "sounds"
+      ],
+      "writes": [
+        "context/formats.json"
+      ],
+      "from": [
+        "context/structure",
+        "context/sounds.json",
+        "context/posts.json"
+      ],
+      "scopes": [
+        "trial-reels"
+      ]
+    },
+    {
+      "id": "text",
+      "what": "the words on screen, row by row",
+      "run": "text.mjs all",
+      "needs": [
+        "structure"
+      ],
+      "per": "post",
+      "writes": [
+        "context/text/<id>.json"
+      ],
+      "from": [
+        "context/structure/<id>.json"
+      ],
+      "scopes": [
+        "trial-reels"
+      ]
+    },
+    {
+      "id": "text-system",
+      "what": "how a line is built on your account",
+      "run": "textsystem.mjs",
+      "needs": [
+        "formats",
+        "text"
+      ],
+      "writes": [
+        "context/text-system.json"
+      ],
+      "from": [
+        "context/formats.json",
+        "context/text"
+      ],
+      "scopes": [
+        "trial-reels"
+      ]
+    },
+    {
+      "id": "captions",
+      "what": "how you write a caption",
+      "run": "captions.mjs",
+      "needs": [
+        "formats"
+      ],
+      "writes": [
+        "context/captions.json"
+      ],
+      "from": [
+        "context/posts.json",
+        "context/formats.json"
+      ],
+      "scopes": [
+        "account",
+        "trial-reels"
+      ]
+    }
+  ],
+  "written": [
+    {
+      "id": "profile.md",
+      "what": "who you are and what worked",
+      "by": "agent",
+      "writes": [
+        "context/profile.md"
+      ],
+      "from": [
+        "context/profile.json",
+        "context/posts.json",
+        "context/formats.json"
+      ]
+    },
+    {
+      "id": "formats.md",
+      "what": "your formats, as zones",
+      "by": "agent",
+      "writes": [
+        "context/formats.md"
+      ],
+      "from": [
+        "context/formats.json",
+        "context/structure"
+      ]
+    },
+    {
+      "id": "text-system.md",
+      "what": "what a line is written from",
+      "by": "agent",
+      "writes": [
+        "context/text-system.md"
+      ],
+      "from": [
+        "context/text-system.json"
+      ]
+    },
+    {
+      "id": "voice.md",
+      "what": "what a caption is written from",
+      "by": "agent",
+      "writes": [
+        "context/voice.md"
+      ],
+      "from": [
+        "context/captions.json",
+        "context/posts.json"
+      ]
+    },
+    {
+      "id": "preferences",
+      "what": "what they have told us, that holds whatever they are making",
+      "writes": [
+        "context/preferences.md"
+      ],
+      "by": "agent"
+    }
+  ]
+}

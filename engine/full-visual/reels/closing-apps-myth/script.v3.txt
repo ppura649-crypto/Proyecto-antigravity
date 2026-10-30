@@ -1,0 +1,13 @@
+[excited] ¡Cerrar todas las apps de tu celular NO ahorra batería! [emphasized] ¡Abrirlas desde cero GASTA MÁS!
+
+[quickly] Tanto Craig Federighi en Apple como los ingenieros de Android confirmaron [emphasized] ¡que deslizar tus apps hacia arriba es un MITO INÚTIL!
+
+[excited] ¡Cuando sales de una aplicación, tu teléfono la CONGELA en la memoria RAM! [rushed] Queda en pausa total usando CERO por ciento de procesador.
+
+[emphasized] ¡Al cerrarla a la fuerza la BORRAS de la memoria! [quickly] Y al volver a abrirla ¡disparas un PICO de procesador y batería recargando todo desde cero!
+
+[excited] ¡Lo que SÍ drena tu batería sin tocar el celular son DOS permisos ocultos! [rushed] La actualización en segundo plano y el GPS activo en modo SIEMPRE.
+
+[emphasized] ¡Haz esto HOY! [quickly] Cierra una app SOLO si se congela, apaga actualizaciones innecesarias ¡y pon tu ubicación solo al usar!
+
+[excited] ¡Confiesa en comentarios cuántas veces al día cerrabas todo por costumbre, comparte este video y recuerda esto!

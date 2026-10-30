@@ -1,0 +1,17 @@
+{
+ "name": "creator-format-2",
+ "who": "Creator Format 2's grammar, measured on 10 + 6 reels (library/styles/refs/), tried on projects/edit-a-creator-format-2",
+ "format": "formats/creator-format-2.json",
+ "style": "creator-format-2",
+ "overlay": "soft",
+ "hookGrammar": "formats/creator-format-2-hook.md",
+ "systemGrammar": "formats/creator-format-2-system.md",
+ "visualGrammar": "formats/creator-format-2-visuals.md + .claude/skills/creator-format-2-style/references/real-media.md",
+ "cardLanguage": "light/dark glass (white 12% + backdrop blur, 1 px hairline), off-white editorial card, real media edge to edge or in a locked split with no chrome; hard cuts, 3-5 frame fades, no springs; one accent",
+ "families": "remotion/src/soft/ (Glass, Objects, Bars, Chat, Editorial, Real)",
+ "sfx": "none measured yet; her reels are read for sound before a palette is written",
+ "pacing": "d-hard",
+ "reference": "~/Downloads/talking-head-edit-a-creator-format-2-full-v2.mp4 (accepted: 'very very good')",
+ "skill": ".claude/skills/creator-format-2-style/SKILL.md",
+ "hookTemplate": "packs/creator-format-2/hook.template.json"
+}

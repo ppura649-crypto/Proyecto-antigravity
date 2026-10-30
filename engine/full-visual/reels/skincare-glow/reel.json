@@ -1,0 +1,55 @@
+{
+  "voice": {
+    "id": "CaJslL1xziwefCeTNzHv",
+    "name": "Cristina Campos",
+    "model": "eleven_v3",
+    "lang": "es",
+    "speed": 1.0,
+    "stability": 0.5,
+    "similarity": 0.8,
+    "style": 0.0
+  },
+  "theme": {
+    "motion": "measured",
+    "caption": {
+      "leadMs": 80
+    },
+    "marker": {
+      "style": "select",
+      "color": "#C9727B",
+      "fill": 0.16,
+      "stroke": 3,
+      "handle": 22
+    },
+    "grounds": {
+      "light": {
+        "bg": "#FAF5EE",
+        "grid": "rgba(130, 96, 74, 0.032)",
+        "ink": "#261E1B",
+        "spoken": "#A4958C",
+        "card": "#FFFDF9",
+        "hairline": "#EADFD3",
+        "dim": "#7B6B61"
+      },
+      "dark": {
+        "bg": "#1B1516",
+        "grid": "rgba(255, 226, 210, 0.028)",
+        "ink": "#FAF3EC",
+        "spoken": "#80706B",
+        "dim": "#B5A39B",
+        "card": "#261D1F",
+        "hairline": "#3D2F31"
+      }
+    },
+    "roles": {
+      "ok": "#4E9A78",
+      "alarm": "#C95B6B",
+      "positive": "#529E7A",
+      "brand": "#D28E5D",
+      "link": "#C9727B"
+    }
+  },
+  "chrome": {
+    "type": "none"
+  }
+}

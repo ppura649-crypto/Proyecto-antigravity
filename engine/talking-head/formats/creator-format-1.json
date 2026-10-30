@@ -1,0 +1,23 @@
+{
+ "name": "creator-format-1",
+ "fontFamily": "Sora, sans-serif",
+ "accentFontFamily": "Sora, sans-serif",
+ "fontWeight": 700,
+ "fontSizePx": 62,
+ "letterSpacingEm": 0.005,
+ "fillColor": "#FFFFFF",
+ "emphasisColor": "#E07850",
+ "textShadow": "0px 2px 6px rgba(0,0,0,0.9), 0px 8px 28px rgba(0,0,0,0.55)",
+ "baselineYFrac": 0.625,
+ "baselineEm": 0.8695,
+ "maxWidthFrac": 0.77,
+ "heroWidthFrac": 0.66,
+ "heroMaxFontPx": 200,
+ "heroMinMs": 600,
+ "wordGapBridgeMs": 600,
+ "wordTailMs": 250,
+ "refWidth": 1080,
+ "refHeight": 1920,
+ "note": "2026-09-03 words Michroma -> Zen Dots (their pick, \"It's better\"), accents already Zen Dots. cardAnchor top (2026-09-04): reference edit A was authored and approved with top-anchored yFrac cards, so it keeps the pre-band placement; every new video uses the measured band instead | 2026-09-05 Zen Dots -> Kode Mono 700, their pick off the type board (font-board.html, 35 faces on the real frames): 'let's use Kode Mono from now on' | 2026-09-05 (later) Kode Mono -> Sora 700: 'let's actually change the font again.. use Sora instead'",
+ "cardAnchor": "top"
+}

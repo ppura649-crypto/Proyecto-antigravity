@@ -1,0 +1,10 @@
+Dejar cargando tu celular toda la noche no daña la batería: estos 2 hábitos diarios sí.
+
+Dejar el teléfono enchufado toda la noche no sobrecarga las baterías actuales, porque ese problema pertenecía a las viejas celdas de níquel de los años 90. Lo que realmente degrada una batería moderna de iones de litio está documentado por Apple y Battery University:
+
+1. Control nocturno automático - Tu smartphone integra un chip gestor de energía que corta el paso de corriente al llegar al 100% y pausa la carga nocturna en 80% hasta minutos antes de que suene tu alarma.
+2. El calor arriba de 35 grados - Apple advierte oficialmente que superar los 35 grados centígrados reduce la capacidad de forma permanente; cargar el celular bajo la almohada, jugando o con una funda gruesa que atrapa calor acelera ese daño químico.
+3. Las descargas profundas a 0% - Según el estudio técnico BU-808 de Battery University, agotar la celda de 100% hasta 0% rinde alrededor de 400 ciclos completos, mientras que mantenerla con recargas parciales entre 20% y 80% supera los 1000 ciclos equivalentes de vida útil.
+4. La regla práctica diaria - Retira la funda solo si notas que el teléfono se calienta al cargar, conéctalo antes de caer del 20% y déjalo cargando en una superficie ventilada sin preocuparte por la hora.
+
+Guarda este video como recordatorio rápido y compártelo con esa persona que siempre tiene el celular en 2% de batería.

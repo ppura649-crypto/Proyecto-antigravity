@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talking Head review</title>
+<style>
+  :root { --bg:#0d0f12; --panel:#16191d; --ink:#eee; --mut:#8a93a0; --keep:#39d353; --hook:#e07850; --cta:#58a6ff; --sel:#e6edf3; --cut:rgba(248,81,73,.32); }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px system-ui; display:flex; flex-direction:column; height:100vh; overflow:hidden; }
+  header { display:flex; gap:14px; align-items:center; padding:8px 14px; background:var(--panel); flex:0 0 auto; }
+  header .stats { color:var(--mut); }
+  header button { background:var(--keep); color:#000; border:0; border-radius:6px; padding:6px 14px; font-weight:700; cursor:pointer; }
+  header .hint { color:var(--mut); margin-left:auto; font-size:12px; text-align:right; }
+  #stage { flex:1 1 auto; display:flex; align-items:center; justify-content:center; min-height:0; padding:10px; }
+  video { max-height:100%; max-width:100%; border-radius:10px; background:#000; }
+  #tlwrap { flex:0 0 auto; background:var(--panel); border-top:1px solid #23272e; padding:10px 0 6px; }
+  #tlbar { display:flex; align-items:center; gap:10px; padding:0 14px 8px; color:var(--mut); font-size:12px; }
+  #timeline { position:relative; overflow-x:auto; overflow-y:hidden; padding:4px 14px 10px; }
+  #strip { position:relative; display:flex; gap:6px; height:132px; width:max-content; }
+  .clip { position:relative; box-sizing:border-box; height:100%; background:#20262c; border:2px solid #2c333b; border-radius:10px; flex:0 0 auto; overflow:hidden; cursor:pointer; user-select:none; }
+  .clip.sel { border-color:var(--sel); }
+  .clip.hook { border-color:var(--hook); }
+  .clip.cta { border-color:var(--cta); }
+  .clip canvas { position:absolute; inset:24px 0 22px 0; width:100%; height:calc(100% - 46px); }
+  .clip .top { position:absolute; top:3px; left:8px; right:8px; display:flex; justify-content:space-between; font-size:11px; color:var(--mut); }
+  .clip .top b { color:var(--ink); }
+  .clip .txt { position:absolute; bottom:3px; left:8px; right:8px; font-size:11px; color:var(--mut); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .clip .h { position:absolute; top:0; bottom:0; width:9px; cursor:ew-resize; z-index:4; }
+  .clip .h.l { left:0; } .clip .h.r { right:0; }
+  .clip .h:hover, .clip .h.drag { background:rgba(230,237,243,.25); }
+  #playhead { position:absolute; top:4px; bottom:10px; width:2px; background:#f85149; z-index:6; pointer-events:none; display:none; }
+  #drawer { flex:0 0 auto; background:var(--bg); max-height:180px; overflow-y:auto; border-top:1px solid #23272e; }
+  #drawer summary { padding:6px 14px; color:var(--mut); cursor:pointer; font-size:13px; }
+  .drow { display:grid; grid-template-columns:44px 40px 1fr 64px 70px; gap:10px; padding:4px 14px; color:var(--mut); font-size:13px; align-items:center; }
+  .drow .restore { background:#2c333b; color:var(--ink); border:0; border-radius:5px; padding:3px 8px; cursor:pointer; }
+  .drow .t { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+</style>
+</head>
+<body>
+<header>
+  <b>Talking Head</b>
+  <span class="stats" id="stats"></span>
+  <button id="save">Save</button>
+  <span id="saved" style="color:var(--keep)"></span>
+  <span class="hint"><b>C</b> split card at playhead &middot; <b>K / Delete</b> drop card &middot; <b>click</b> seek &middot; <b>space</b> play/pause &middot; <b>&larr;/&rarr;</b> select &middot; <b>enter</b> play clip &middot; <b>drag edges</b> trim/extend</span>
+</header>
+<div id="stage"><video id="video" src="source.mov" playsinline></video></div>
+<div id="tlwrap">
+  <div id="tlbar">
+    <span>timeline</span>
+    <input type="range" id="zoom" min="20" max="200" value="64" style="width:160px">
+    <span id="dur"></span>
+  </div>
+  <div id="timeline"><div id="strip"><div id="playhead"></div></div></div>
+</div>
+<details id="drawer"><summary>dropped clips</summary><div id="dlist"></div></details>
+<script src="app.js"></script>
+</body>
+</html>

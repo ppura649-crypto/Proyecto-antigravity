@@ -1,0 +1,17 @@
+{
+  "context": {
+    "fileName": "AGENTS.md"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node hooks/session-start-json.mjs"
+          }
+        ]
+      }
+    ]
+  }
+}

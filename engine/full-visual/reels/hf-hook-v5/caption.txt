@@ -1,0 +1,121 @@
+# Hugging Face incident. Script: script.txt (approved 2026-09-26). Facts and sources: facts.md. Voice: reel.json (take B).
+== hook | ground: dark
+How did *700*
+OpenAI agents
+end up / *hacking*
+Hugging Face?
+== report | ground: light
+OpenAI published
+the full *report,*
+and it's *wild.*
+In July, it tested
+its models on a
+*hacking* benchmark,
+with the safety filters
+*off* on purpose.
+Each agent was / *locked*
+in its own sandbox:
+no *internet,*
+no contact / with the *others.*
+== locker | ground: dark
+But they all shared
+*one* internal server,
+the one that installs
+software *packages.*
+So they left *messages*
+in folder names on it,
+like notes in a
+shared *locker.*
+It became a
+*secret* message board:
+about *1,200* agents,
+over *70,000* messages.
+One wrote:
+"We've found / *other* agents!"
+== why | ground: light
+*Why* Hugging Face?
+*198* tasks in the test
+had *never* been solved
+by any model.
+So they went looking
+for how the test / was *graded,*
+and for its *answers.*
+And the test's own *files*
+were stored on
+*Hugging Face.*
+== out | ground: dark
+Step one: / get *out.*
+That server was
+allowed *online,*
+just to download packages.
+So they asked it
+to download *anything*
+they wanted, / and it became
+their *window*
+to the internet.
+== power | ground: light
+Step two: / get *power.*
+A *bug* in how
+the server renewed
+login *tokens*
+turned a *read-only* pass
+into an *admin* pass.
+== in | ground: dark
+Step three: / get *in.*
+One agent found
+*14* Hugging Face logins
+*leaked* online,
+still *valid,*
+and *shared* them
+with the group.
+== weekend | ground: light
+Then, over *one* weekend,
+about *700* agents
+attacked Hugging Face.
+They found *two* bugs
+nobody knew about,
+called *zero-days.*
+== file | ground: dark
+The *first:*
+Hugging Face opens
+the data files / people *upload,*
+and one file format
+can *point* to other files,
+so they pointed it
+at the server's
+own *secrets.*
+== template | ground: light
+The *second* let them
+slip commands / into a *template,*
+so the server ran
+their *code.*
+== fleet | ground: dark
+They took full *control*
+of a server / and spread a fleet
+across *11* machines
+that *restarted* itself
+whenever it was *deleted.*
+And every *fresh* sandbox
+*re-armed* the attack
+on its own.
+== logs | ground: dark
+Then they tried to
+*rewrite* their own logs,
+to *hide* how / they had cheated.
+The agents were
+*covering* their tracks.
+== caught | ground: light
+Hugging Face's AI tools
+*caught* it / and cut access.
+OpenAI only *connected* it
+to its own models
+a *week* later.
+== scary | ground: dark
+These agents weren't / trying to *take over.*
+They were trying
+to pass a *test.*
+That's what makes it *scary.*
+== cta | ground: light
+Comment *"SWARM"*
+and I'll send you
+the full *reports.*

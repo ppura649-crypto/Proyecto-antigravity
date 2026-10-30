@@ -1,0 +1,201 @@
+{
+  "name": "keyframes-runtime",
+  "version": "0.2.11",
+  "setup_version": 1,
+  "node": ">=22.12",
+  "packs": [
+    {
+      "name": "full-visual",
+      "version": "0.1.1",
+      "setup_version": 1,
+      "command": "/full-visual",
+      "runtime": ">=0.2.10",
+      "first_run": {
+        "rank": 1,
+        "why": "it starts from a subject, nothing to film"
+      },
+      "needs": {
+        "account": false,
+        "keys": [],
+        "optional_keys": [
+          "ELEVENLABS_API_KEY",
+          "OPENAI_API_KEY",
+          "FISH_API_KEY",
+          "COMPOSIO_API_KEY"
+        ],
+        "keys_note": "A voice needs the buyer's own key for one service: ElevenLabs (exact word timing, the house voice), OpenAI or Fish Audio. Instagram through Composio is optional and only steers topics.",
+        "inputs": [
+          "a subject for the Research step, and optionally the buyer's own transcript for the Transcript step"
+        ],
+        "deps": {
+          "platform": "macOS, Windows or Linux. Rendering, voice and checks are the same everywhere; a voice without word timestamps is timed by whisper.cpp, which the folder fetches once.",
+          "ffmpeg": "the machine's own ffmpeg and ffprobe, because the engine's scripts call them by name",
+          "python": "numpy, run through the folder's Python runner (scripts/py.mjs), no python3 on the PATH needed",
+          "node": "remotion and @remotion/google-fonts from the folder's own package.json",
+          "browser": "the headless shell Remotion fetches; CHROME overrides it"
+        },
+        "tools": [
+          {
+            "name": "ffmpeg",
+            "why": "voice timing, pause trimming and the render checks",
+            "bin": "ffmpeg",
+            "args": [
+              "-version"
+            ],
+            "install": {
+              "darwin": "brew install ffmpeg",
+              "win32": "winget install -e --id Gyan.FFmpeg --accept-package-agreements --accept-source-agreements",
+              "linux": "sudo apt install -y ffmpeg"
+            }
+          },
+          {
+            "name": "ffprobe",
+            "why": "reading a take's length, and it comes with ffmpeg",
+            "bin": "ffprobe",
+            "args": [
+              "-version"
+            ],
+            "install": {
+              "darwin": "brew install ffmpeg",
+              "win32": "winget install -e --id Gyan.FFmpeg --accept-package-agreements --accept-source-agreements",
+              "linux": "sudo apt install -y ffmpeg"
+            }
+          }
+        ]
+      },
+      "keep": [
+        "engine/full-visual/reels",
+        "engine/full-visual/public",
+        "engine/full-visual/output"
+      ],
+      "at": "2026-10-12T19:04:10.656Z"
+    },
+    {
+      "name": "talking-head",
+      "version": "0.6.0",
+      "setup_version": 11,
+      "command": "/talking-head",
+      "runtime": ">=0.2.10",
+      "first_run": {
+        "rank": 2,
+        "why": "it needs one clip of you talking to camera"
+      },
+      "needs": {
+        "keys": [
+          "COMPOSIO_API_KEY"
+        ],
+        "inputs": [
+          "one talking-head clip in input/talking-head/"
+        ],
+        "deps": {
+          "platform": "macOS, Windows or Linux. A Mac uses Apple speech (through auto-editor) and Apple Vision; Windows and Linux use whisper.cpp with voice detection (scripts/transcribe.mjs) and OpenCV's face finder (engine/scripts/facekit/measure_face_cv.py). Proven on a Mac, with the Windows path exercised on that Mac; not yet run on a Windows machine.",
+          "ffmpeg": "the machine's own ffmpeg and ffprobe, because the engine calls them by name",
+          "auto-editor": "transcript, levels and the cut",
+          "python": "pillow, numpy, matplotlib, scipy; opencv-python-headless too where there is no Mac",
+          "node": "remotion, @remotion/google-fonts and puppeteer-core from the folder's own package.json",
+          "browser": "the headless shell Remotion fetches; CHROME overrides it for page captures"
+        },
+        "tools": [
+          {
+            "name": "ffmpeg",
+            "why": "every cut and every export",
+            "bin": "ffmpeg",
+            "args": [
+              "-version"
+            ],
+            "install": {
+              "darwin": "brew install ffmpeg",
+              "win32": "winget install -e --id Gyan.FFmpeg --accept-package-agreements --accept-source-agreements",
+              "linux": "sudo apt install -y ffmpeg"
+            }
+          },
+          {
+            "name": "ffprobe",
+            "why": "reading each clip, and it comes with ffmpeg",
+            "bin": "ffprobe",
+            "args": [
+              "-version"
+            ],
+            "install": {
+              "darwin": "brew install ffmpeg",
+              "win32": "winget install -e --id Gyan.FFmpeg --accept-package-agreements --accept-source-agreements",
+              "linux": "sudo apt install -y ffmpeg"
+            }
+          },
+          {
+            "name": "auto-editor",
+            "why": "the levels and the cut, and on a Mac the transcript",
+            "bin": "auto-editor",
+            "args": [
+              "--version"
+            ],
+            "install": {
+              "darwin": "brew install auto-editor",
+              "win32": "curl -L --create-dirs -o \"%LOCALAPPDATA%\\Microsoft\\WindowsApps\\auto-editor.exe\" https://github.com/WyattBlue/auto-editor/releases/latest/download/auto-editor-windows-x86_64.exe",
+              "linux": "mkdir -p ~/.local/bin && curl -L https://github.com/WyattBlue/auto-editor/releases/latest/download/auto-editor-linux-x86_64 -o ~/.local/bin/auto-editor && chmod +x ~/.local/bin/auto-editor"
+            }
+          },
+          {
+            "name": "python3",
+            "why": "its scripts are called as python3",
+            "bin": "python3",
+            "args": [
+              "--version"
+            ],
+            "install": {
+              "darwin": "brew install python",
+              "linux": "sudo apt install -y python3 python3-pip",
+              "win32": "winget install -e --id Python.Python.3.12 --accept-package-agreements --accept-source-agreements & py -3 -c \"import shutil,sys,os; shutil.copy(sys.executable, os.path.join(os.path.dirname(sys.executable), 'python3.exe'))\""
+            }
+          },
+          {
+            "name": "python packages",
+            "why": "measuring, charts and its checks",
+            "bin": "python3",
+            "args": {
+              "darwin": [
+                "-c",
+                "import PIL, numpy, matplotlib, scipy"
+              ],
+              "default": [
+                "-c",
+                "import PIL, numpy, matplotlib, scipy, cv2"
+              ]
+            },
+            "install": {
+              "darwin": "python3 -m pip install --user pillow numpy matplotlib scipy || python3 -m pip install --user --break-system-packages pillow numpy matplotlib scipy",
+              "default": "python3 -m pip install --user pillow numpy matplotlib scipy opencv-python-headless || python3 -m pip install --user --break-system-packages pillow numpy matplotlib scipy opencv-python-headless"
+            }
+          }
+        ],
+        "keys_note": "COMPOSIO_API_KEY is optional here; the caption reads the profile when it is present"
+      },
+      "at": "2026-10-12T19:04:11.426Z"
+    },
+    {
+      "name": "split-explainer",
+      "version": "0.2.0",
+      "setup_version": 1,
+      "command": "/split-explainer",
+      "runtime": ">=0.2.10",
+      "first_run": {
+        "rank": 2,
+        "why": "it needs one recording and your presentation choices"
+      },
+      "needs": {
+        "keys": [],
+        "inputs": [
+          "one original talking-head recording"
+        ],
+        "deps": {
+          "ffmpeg": "via the runtime",
+          "transcription": "via runtime intake"
+        }
+      },
+      "at": "2026-10-12T19:04:11.552Z"
+    }
+  ],
+  "compositions": [
+    "engine/split-explainer/render/Stage.tsx"
+  ]
+}

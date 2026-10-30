@@ -1,0 +1,18 @@
+{
+  "name": "talking-head-remotion",
+  "version": "1.0.0",
+  "description": "\"[Logo] + [Logo] = [payoff]\" explainer reels \u2014 black header over full-bleed timelapse footage.",
+  "scripts": {},
+  "dependencies": {
+    "@remotion/bundler": "^4.0.438",
+    "@remotion/cli": "^4.0.438",
+    "@remotion/google-fonts": "^4.0.438",
+    "@remotion/media-utils": "^4.0.438",
+    "@remotion/renderer": "^4.0.438",
+    "remotion": "^4.0.438",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
+  }
+}
